@@ -13,7 +13,7 @@ from matplotlib.lines import Line2D
 @st.cache_data
 def load_data():
     customers_df = pd.read_csv("customers_dataset.csv")
-    geolocation_df = pd.read_csv("geolocation_dataset.csv")
+    #geolocation_df = pd.read_csv("geolocation_dataset.csv")
     order_items_df = pd.read_csv("order_items_dataset.csv")
     order_payments_df = pd.read_csv("order_payments_dataset.csv")
     order_reviews_df = pd.read_csv("order_reviews_dataset.csv")
@@ -21,8 +21,8 @@ def load_data():
     products_df = pd.read_csv("products_dataset.csv")
     product_category_df = pd.read_csv("product_category_name_translation.csv")
     sellers_df = pd.read_csv("sellers_dataset.csv")
-    brazil_states = gpd.read_file("brazil_states/BRA_adm1.shp")
-    return customers_df, geolocation_df, order_items_df, order_payments_df, order_reviews_df, orders_df, products_df, product_category_df, sellers_df, brazil_states
+    #brazil_states = gpd.read_file("brazil_states/BRA_adm1.shp")
+    return customers_df, order_items_df, order_payments_df, order_reviews_df, orders_df, products_df, product_category_df, sellers_df #, brazil_states, geolocation_df,
 
 # Load data
 customers_df, geolocation_df, order_items_df, order_payments_df, order_reviews_df, orders_df, products_df, product_category_df, sellers_df, brazil_states = load_data()
@@ -349,11 +349,13 @@ elif analysis_type == "Delivery Times and Reviews":
 #================================================================================================
 elif analysis_type == "Geographical Trends":
     st.header("Geographical Trends")
+    st.text("untuk geographical trends silahkan jalankan dashboard via local, karena file-nya terlalu besar untuk di up di github")
 
     # Date range input for filtering
     start_date = st.date_input("Start Date", value=pd.to_datetime("2017-01-01"))
     end_date = st.date_input("End Date", value=pd.to_datetime("2022-12-31"))
 
+    """
     # Merge customers and orders data
     customer_order = orders_df.merge(customers_df, on="customer_id", how="left")
     geographical_customer_order_df = customer_order.merge(
@@ -467,7 +469,7 @@ elif analysis_type == "Geographical Trends":
 
     # Show the map
     st.pyplot(fig)
-
+    """
 
 #========================================================================================================
 elif analysis_type == "Customer Behavior":
