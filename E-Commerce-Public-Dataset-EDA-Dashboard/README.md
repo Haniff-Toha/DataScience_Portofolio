@@ -38,13 +38,17 @@ pip install streamlit pandas matplotlib geopandas folium
 1. Clone or download the repository.
    
    ```bash
-   git clone <[repository_url](https://github.com/Haniff-Toha/DataScience_Portofolio/edit/main/E-Commerce-Public-Dataset-EDA-Dashboard/)>
+   git clone <[repository_url](https://github.com/Haniff-Toha/DataScience_Portofolio/edit/main/E-Commerce-Public-Dataset-EDA-Dashboard/dashboard)>
    ```
 
 2. Navigate to the project directory.
    
    ```bash
-   cd <dashboard>
+   mkdir proyek_analisis_data
+   cd proyek_analisis_data
+   pipenv install
+   pipenv shell
+   pip install -r requirements.txt
    ```
 
 3. Run the Streamlit app.
