@@ -1,16 +1,14 @@
-Sure! Below is an example `README.md` file that explains how to run the Streamlit dashboard and gives a brief overview of the analysis you've created. You can adapt the details based on your project specifics.
-
----
-
-# Streamlit Dashboard for E-commerce Data Analysis
+# E-Commerce Public Dataset EDA and Streamlit Dashboard
 
 ## Overview
 
 This project is a data analysis and visualization dashboard built using **Streamlit**, focused on analyzing various trends in e-commerce data, including product performance, geographical sales distribution, customer behavior, and review analysis. The dashboard provides an interactive interface to explore key metrics, such as:
 
 - **Product Performance**: Analysis of top-performing products based on sales and customer ratings.
-- **Geographical Trends**: Exploration of sales distribution and customer concentration across different states in Brazil.
+- **Revenue Analysis**: Analysis of revenue trends.
 - **Delivery and Review Analysis**: Insights into delivery times and their correlation with customer review scores.
+- **Geographical Trends**: Exploration of sales distribution and customer concentration across different states in Brazil.
+- **Customer Behavior**: RFM Analysis
 
 The data used for this analysis comes from a Brazilian e-commerce dataset that includes order, customer, payment, and geographical information.
 
@@ -118,22 +116,6 @@ In this section, we explore the relationship between **delivery times** and **cu
 - **Average Delivery Time by Review Score**: A bar chart displaying the average delivery time for orders, grouped by review score.
 
 An interactive filter allows users to examine how these metrics change over different time periods.
-
----
-
-## File Structure
-
-```
-.
-├── app.py               # Main Streamlit application
-├── data                 # Directory containing datasets
-│   ├── orders.csv
-│   ├── customers.csv
-│   ├── geolocation.csv
-│   ├── payments.csv
-│   └── brazil_states.shp  # Shapefile for Brazilian states (if using map)
-└── requirements.txt     # Python package dependencies
-```
 
 ---
 
