@@ -1,2 +1,2 @@
-# di local Sudah berjalan, di cloud kadang jalan kadang error
+# di local Sudah berjalan dengan geographical trends
 Tulisannya customers_datasets.csv ga ketemu, padahal ada :(
