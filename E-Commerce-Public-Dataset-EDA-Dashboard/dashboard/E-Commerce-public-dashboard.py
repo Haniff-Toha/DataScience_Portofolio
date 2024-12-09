@@ -25,7 +25,8 @@ def load_data():
     return customers_df, order_items_df, order_payments_df, order_reviews_df, orders_df, products_df, product_category_df, sellers_df #, brazil_states, geolocation_df,
 
 # Load data
-customers_df, geolocation_df, order_items_df, order_payments_df, order_reviews_df, orders_df, products_df, product_category_df, sellers_df, brazil_states = load_data()
+#customers_df, order_items_df, order_payments_df, order_reviews_df, orders_df, products_df, product_category_df, sellers_df, geolocation_df, brazil_states = load_data()
+customers_df, order_items_df, order_payments_df, order_reviews_df, orders_df, products_df, product_category_df, sellers_df = load_data()
 
 # Merge product and order item data
 product_order_data = order_items_df.merge(products_df, on='product_id', how='inner')
