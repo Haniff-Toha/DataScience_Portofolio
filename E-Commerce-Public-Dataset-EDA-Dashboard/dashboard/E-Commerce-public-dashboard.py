@@ -39,7 +39,7 @@ products_df['product_category_name'] = products_df['product_category_name_englis
 
 # Sidebar for navigation
 with st.sidebar:
-    st.image("https://github.com/Haniff-Toha/DataScience_Portofolio/blob/main/E-Commerce-Public-Dataset-EDA-Dashboard/dashboard/E-Commerce-logo.png", width=200)
+    st.image("https://raw.githubusercontent.com/Haniff-Toha/DataScience_Portofolio/main/E-Commerce-Public-Dataset-EDA-Dashboard/dashboard/E-Commerce-logo.png", width=200)
     st.sidebar.title("Navigation")
     analysis_type = st.sidebar.radio(
         "Select Analysis",
