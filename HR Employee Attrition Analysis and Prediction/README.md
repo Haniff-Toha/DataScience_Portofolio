@@ -18,9 +18,9 @@ Proyek ini bertujuan untuk memanfaatkan analisis prediktif dalam mengatasi tanta
 
 ### **Problem Statements**  
 1. Apa saja faktor utama yang mendorong attrition karyawan dalam organisasi?  
-2. Bagaimana cara memprediksi secara akurat apakah seorang karyawan kemungkinan akan keluar dari perusahaan?  
-3. Bagaimana organisasi dapat mengurangi risiko kehilangan karyawan berkualitas tinggi (keluarnya karyawan yang berkualitas)?  
-4. Bagaimana wawasan prediktif dapat membantu menekan biaya rekrutmen dan pelatihan akibat attrition?  
+2. Bagaimana cara memprediksi secara akurat apakah seorang karyawan kemungkinan akan keluar dari perusahaan?  (Akurasi)
+3. Bagaimana organisasi dapat mengurangi risiko kehilangan karyawan berkualitas tinggi (keluarnya karyawan yang berkualitas)?  (Presisi) mereduksi FN dan mereduksi FP (Recall)
+4. Bagaimana predictive analysis dapat membantu menekan biaya rekrutmen dan pelatihan akibat attrition?  
 
 ### **Goals**  
 - Mengembangkan model prediksi untuk mengidentifikasi karyawan yang berisiko keluar.
