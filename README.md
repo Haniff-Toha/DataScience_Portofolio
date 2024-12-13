@@ -31,7 +31,7 @@ Based on our Exploratory Data Analysis;
 - Conducting a campaign for performing loan customers based on the criteria obtained from the EDA (Exploratory Data Analysis).
 
 ---------------------------
-## 📌[Improving Employee Retention by Predicting Employee Attrition Using ML](https://github.com/Haniff-Toha/DataScience_Portofolio/tree/main/Improving%20Employee%20Retention%20by%20Predicting%20Employee%20Attrition%20Using%20ML)
+## 📌[Improving Employee Retention by Predicting Employee Attrition Using ML](https://github.com/Haniff-Toha/DataScience_Portofolio/tree/main/HR%20Employee%20Attrition%20Analysis%20and%20Prediction)
 [![Full Documentaion!](https://img.shields.io/badge/Full-Documentation-1abc9c.svg)](https://github.com/Haniff-Toha/DataScience_Portofolio/tree/main/Improving%20Employee%20Retention%20by%20Predicting%20Employee%20Attrition%20Using%20ML)
 
 <p>-</p>
