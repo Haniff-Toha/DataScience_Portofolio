@@ -239,7 +239,10 @@ Penjelasan:
 
 ## Data Preparation
 Pada tahap ini dilakukan beberapa penyesuaian pada data diantaranya,
-1. **Feature Selection**: dilakukan untuk menyeleksi fitu-fitur yang tidak relevan terhadap analysis yag dilakukan, beberapa fitur yang di buang dengan alasannya sebagai berikut, 
+
+1. Handling terhadap **Null Value**, **Missing Value**, dan **Duplicate** tidak dilakukan karena tidak ada nilai yang Null, Hilang, ataupun duplikat yang ditemukan dalam data
+
+2. **Feature Selection**: dilakukan untuk menyeleksi fitu-fitur yang tidak relevan terhadap analysis yag dilakukan, beberapa fitur yang di buang dengan alasannya sebagai berikut, 
    - **`EmployeeNumber`**: Hanya merupakan pengenal unik untuk setiap karyawan, tidak relevan untuk analisis atau prediksi.  
    - **`EmployeeCount`**: Semua baris memiliki nilai yang sama, sehingga tidak memberikan informasi yang berarti.  
    - **`Over18`**: Semua baris memiliki nilai "Yes", sehingga tidak memberikan variasi data.  
@@ -247,7 +250,7 @@ Pada tahap ini dilakukan beberapa penyesuaian pada data diantaranya,
    - **`PerformanceRating`**: Hampir semua karyawan memiliki nilai yang sama hanya [3,4], sehingga fitur ini kurang bervariasi untuk digunakan dalam model prediksi.  
 Dengan menghapus fitur-fitur ini, kita dapat menyederhanakan dataset tanpa kehilangan informasi yang penting.
 
-2. **Feature Encoding**: Feature Encoding dilakukan untuk menyesuaikan data dengan tipe data objek, proses ini dilakukan agar fitur dengan tipe data object dapat digunakan untuk pelatihan model prediktif, adapun fitur encoding diterapkan pada kolom `Attrition`, `BusinessTravel`, `Gender`, `MaritalStatus`, `OverTime`, `Department`, `EducationField`, `JobRole`. Encoding dilakukan menggunakan metode label encoding, dengan penerapan label sebagai berikut,
+3. **Feature Encoding**: Feature Encoding dilakukan untuk menyesuaikan data dengan tipe data objek, proses ini dilakukan agar fitur dengan tipe data object dapat digunakan untuk pelatihan model prediktif, adapun fitur encoding diterapkan pada kolom `Attrition`, `BusinessTravel`, `Gender`, `MaritalStatus`, `OverTime`, `Department`, `EducationField`, `JobRole`. Encoding dilakukan menggunakan metode label encoding, dengan penerapan label sebagai berikut,
    1. **Attrition:** 0: No, 1: Yes
    2. **BusinessTravel:** 0: Non-Travel, 1: Travel_Rarely, 2: Travel_Frequently
    3. **Department:** 0: Sales, 1: Research & Development, 2: Human Resources
@@ -257,15 +260,11 @@ Dengan menghapus fitur-fitur ini, kita dapat menyederhanakan dataset tanpa kehil
    7. **MaritalStatus:** 0: Single, 1: Married, 2: Divorced
    8. **OverTime:** 0: No, 1: Yes
 
-3. **Normalisasi**: Normalisasi dilakukan agar pelatihan model machine learning lebih optimal karena setiap data numerikal memiliki range yang berbeda-beda. Adapun normalisasi dilakukan dengan metode MinMax Scaler, karena adanya outlier ataupun distribusi data masih masuk akal dan merepresentasikan nilai yang real dan semuanya merepresentasikan keunikan masing-masing
-
-4. Adapun handling terhadap **Null Value**, **Missing Value**, dan **Duplicate** tidak dilakukan karena tidak ada nilai yang Null, Hilang, ataupun duplikat yang ditemukan dalam data
+4. **Normalisasi**: Normalisasi dilakukan agar pelatihan model machine learning lebih optimal karena setiap data numerikal memiliki range yang berbeda-beda. Adapun normalisasi dilakukan dengan metode MinMax Scaler, karena adanya outlier ataupun distribusi data masih masuk akal dan merepresentasikan nilai yang real dan semuanya merepresentasikan keunikan masing-masing
 
 5. **Data Splitting**: setelah melalui beberapa tahapan preprocessing, selanjutnya dilakukan split data untuk membagi data latih dan data uji. split data dilakukan 70% untuk data latih dan 30% untuk data Uji
 
----
-## Modeling
-Sebelum melatih model, data yang telah melewati proses *preprocessing* dan *splitting* dilakukan penanganan ketidakseimbangan (*imbalance handling*). Metode **SMOTE (Synthetic Minority Oversampling Technique)** digunakan untuk mengatasi ketidakseimbangan data antara kelas mayoritas (`No Attrition`) sebesar **84%** dan kelas minoritas (`Attrition`) sebesar **16.1%**.  
+6. **Handle Imbalance**: dilakukan penanganan ketidakseimbangan (*imbalance handling*) menggunakan Metode **SMOTE (Synthetic Minority Oversampling Technique)**. metode ini digunakan untuk mengatasi ketidakseimbangan data antara kelas mayoritas (`No Attrition`) sebesar **84%** dan kelas minoritas (`Attrition`) sebesar **16.1%**.  
 
 SMOTE dipilih karena metode ini:  
 - **Mencegah overfitting**, terutama jika dibandingkan dengan metode oversampling sederhana.  
@@ -274,7 +273,9 @@ SMOTE dipilih karena metode ini:
 
 Hasil dari penerapan SMOTE menunjukkan distribusi yang seimbang dengan **50% Attrition** dan **50% No Attrition**.
 
-Setelah dilakukan Handel Imbalance, selanjutnya dilakukan tahap pemilihan algoritma  
+---
+## Modeling
+Setelah melewati proses *preprocessing*, selanjutnya dilakukan tahap pemilihan algoritma  
 Pada proyek ini, dilakukan pemodelan menggunakan lima algoritma *machine learning*:  
 Berikut adalah penjelasan yang lebih sederhana mengenai **algoritma** dan **parameter penting** yang digunakan:
 
