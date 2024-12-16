@@ -85,7 +85,7 @@ Dataset yang digunakan pada proyek ini merupakan data opensource yang ditemukan 
 
 ### Exploratory Data Analysis
 
-- **Deskripsi Statistik**:
+#### **Deskripsi Statistik**:
   - Dataset product
   - Kolom Kategorikal
   - ![Deskripsi Statistik Produk](product_recommendation_image/prod_desat_cat.png)
@@ -135,6 +135,9 @@ Dataset yang digunakan pada proyek ini merupakan data opensource yang ditemukan 
         * Lebih rendah dibandingkan rating produk.
         * Indikasi: Mungkin ada faktor lain yang mempengaruhi penilaian pengguna.
 
+
+### Univariate Analysis
+#### Product Dataset
 - **Kategori Produk**:
   - Produk dikategorikan ke dalam beberapa jenis, seperti elektronik, pakaian, dan pertanian. Distribusi kategori menunjukkan dominasi beberapa kategori tertentu.
 
@@ -152,9 +155,87 @@ Dataset yang digunakan pada proyek ini merupakan data opensource yang ditemukan 
 - **Pola Interaksi Pengguna**:
 
   - Sebagian besar pengguna hanya memberikan ulasan untuk beberapa produk, menunjukkan adanya long-tail effect pada data ulasan.
+ 
+#### User Reviews Dataset
 
-### Insight Awal
+## Data Perparation
+1. Handle Null Value
+2. Handle Duplicate
+3. Handle Miss-Spelling
 
-1. Kebutuhan normalisasi data pada kolom `price` dan `stock` pada `Product Dataset` untuk analisis dan pemodelan lebih lanjut.
-2. Kolom `productdescription` dapat dimanfaatkan untuk pendekatan content-based filtering, sementara pola pada kolom `user_id` dan `rating` cocok untuk pendekatan collaborative filtering.
-3. Tidak adanya missing values signifikan pada dataset `user_reviews` mempermudah proses data preparation.
+### **Content-Based Filtering**
+### **Collaborative Filterring**
+
+## Modelling
+### **Content-Based Filtering**
+### **Collaborative Filterring**
+**Matrix Factorization dengan SVD untuk Collaborative Filtering**  
+
+Matrix Factorization adalah salah satu pendekatan yang digunakan dalam sistem rekomendasi untuk memprediksi preferensi pengguna terhadap item berdasarkan pola yang sudah ada di data. Salah satu metode yang populer untuk matrix factorization adalah **Singular Value Decomposition (SVD)**.
+
+### Konsep SVD
+SVD adalah metode dekomposisi matriks yang memecah sebuah matriks \( R \) (misalnya matriks rating pengguna-item) menjadi tiga matriks:
+
+\[
+$$R = U \cdot \Sigma \cdot V^T$$
+\]
+
+1. **\( U \)** (User Matrix): Representasi fitur laten pengguna.  
+2. **\( $$\Sigma$$ \)** (Singular Value Matrix): Matriks diagonal yang mengandung singular values, yang menunjukkan kepentingan setiap fitur laten.  
+3. **\( $$V^T$$ \)** (Item Matrix): Representasi fitur laten item.
+
+### Implementasi dalam Collaborative Filtering
+1. **Input Data**: 
+   - Matriks rating \( R \), di mana baris merepresentasikan pengguna dan kolom merepresentasikan item. Nilai dalam matriks adalah rating yang diberikan oleh pengguna terhadap item.  
+   - Jika ada nilai yang kosong (missing values), biasanya diisi dengan nilai rata-rata atau dibiarkan kosong dalam beberapa implementasi.
+
+2. **Reduksi Dimensi**: 
+   - SVD memecah matriks \( $$R$$ \) menjadi tiga matriks, namun kita dapat memilih hanya beberapa singular values teratas dari \( $$\Sigma$$ \) untuk mengurangi dimensi dan menangkap pola penting saja. Ini membantu dalam menangani data yang besar dan mengurangi noise.
+
+3. **Rekonstruksi Matriks**:
+   - Matriks \( $$R'$$ \), hasil perkalian \( $$U$$ \), \( $$\Sigma$$ \), dan \( V^T \), merepresentasikan prediksi rating yang bisa diberikan pengguna terhadap item. Jika ada nilai kosong di matriks awal \( $$R$$ \), nilai tersebut akan terisi dengan prediksi rating.
+
+4. **Prediksi**:
+   - Dari matriks rekonstruksi \( $$R'$$ \), kita dapat memilih **Top-N Recommendation** untuk setiap pengguna berdasarkan prediksi rating tertinggi.
+
+### Kelebihan dan Kekurangan SVD
+#### Kelebihan:
+- Mampu menangkap pola laten antara pengguna dan item, bahkan jika data rating yang tersedia sparsity (jarang).
+- Reduksi dimensi membuat algoritma lebih efisien untuk dataset yang besar.
+
+#### Kekurangan:
+- Membutuhkan preprocessing, terutama jika ada nilai kosong dalam matriks rating.
+- Tidak mempertimbangkan data tambahan, seperti metadata item atau demografi pengguna (murni berbasis data interaksi).
+
+### Contoh Singkat
+Misalkan ada matriks rating:
+
+|          | Item A | Item B | Item C |
+|----------|--------|--------|--------|
+| User 1   | 5      | ?      | 4      |
+| User 2   | ?      | 3      | 2      |
+| User 3   | 1      | ?      | ?      |
+
+Menggunakan SVD, kita dapat memprediksi nilai **"?"** berdasarkan pola dalam matriks, dan memberikan rekomendasi seperti:  
+- "Item B cocok untuk User 1 dengan rating prediksi 4.5."
+
+Metode ini sangat efektif dalam sistem rekomendasi berbasis data historis!
+
+
+
+## Evaluation
+1. Mean Square Error (MSE)
+2. Root Mean Square Error (RMSE)
+
+### Model Evaluation
+#### **Content-Based Filtering**
+#### **Collaborative Filterring**
+
+## Kesimpulan
+
+## Referensi
+- [Pushpendra K, Ramjeevan ST (2018) "Recommendation system techniques and related issues: a survey",  International Journal of Information Technology Volume 10, pages 495–501](https://link.springer.com/article/10.1007/s41870-018-0138-8)
+- [Lioliang J, et.al (2018) "A trust‑based collaborative filtering algorithm for E‑commerce
+recommendation system", Journal of Ambient Intelligence and Humanized Computing Volume 10, pages 3023–3034](https://link.springer.com/article/10.1007/s12652-018-0928-7)
+- https://towardsdatascience.com/recommender-system-singular-value-decomposition-svd-truncated-svd-97096338f361
+- https://medium.com/@connectwithghosh/simple-matrix-factorization-example-on-the-movielens-dataset-using-pyspark-9b7e3f567536
