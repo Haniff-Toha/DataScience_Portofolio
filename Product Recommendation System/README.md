@@ -392,11 +392,6 @@ Berdasarkan hasil tersebut dibuatlah fFungsi `recommend_products` dibuat, meneri
 didapati bahwa produk rekomendasi yang diberikan tidak hanya dari satu kategori yang sama.
 
 ## Evaluation
-Berikut adalah versi profesional dan lengkap dari bagian **Evaluasi** dalam Bahasa Indonesia:  
-
----
-
-## Evaluasi  
 Untuk mengevaluasi kinerja sistem rekomendasi, digunakan metrik-metrik berikut:  
 
 1. **Mean Absolute Error (MAE)**  
