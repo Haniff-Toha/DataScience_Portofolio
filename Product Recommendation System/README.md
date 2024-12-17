@@ -346,7 +346,7 @@ dimana,
     - Dari matriks rekonstruksi \( $$R'$$ \), kita dapat memilih **Top-N Recommendation** untuk setiap pengguna berdasarkan prediksi rating tertinggi [3].
 
 #### Implementasi pada projek
-1. Matriks `user_product_matrix` digunakan sebagai input untuk SVD ( $$R$$ ), dengan nilai-nya terlebih dahulu dilakukan normalisasi untuk memusatkan data, karena SVD bekerja paling baik ketika data terpusat di sekitar nol. Dengan memusatkan data, SVD akan lebih fokus pada variasi data, yaitu seberapa jauh setiap nilai menyimpang dari rata-rata. Jika data memiliki rata-rata yang tinggi, SVD mungkin akan lebih banyak menangkap perbedaan dalam seberapa jauh pengguna menyimpang dari rata-rata tinggi ini, daripada pola interaksi antara pengguna dan item yang sebenarnya.
+1. Matriks `user_product_matrix` digunakan sebagai input untuk SVD ( $$R$$ ), dengan nilai-nya terlebih dahulu dilakukan normalisasi untuk memusatkan data, karena SVD bekerja paling baik ketika data terpusat di sekitar nol. Dengan memusatkan data, SVD akan lebih fokus pada variasi data, yaitu seberapa jauh setiap nilai menyimpang dari rata-rata. Jika data memiliki rata-rata yang tinggi, SVD mungkin akan lebih banyak menangkap perbedaan dalam seberapa jauh pengguna menyimpang dari rata-rata tinggi ini, daripada pola interaksi antara pengguna dan item yang sebenarnya [5].
 ```
 R = user_product_matrix.values
 
