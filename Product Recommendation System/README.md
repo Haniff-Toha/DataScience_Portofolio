@@ -1,15 +1,14 @@
 # Laporan Proyek Machine Learning - Muhammad Haniff
 
 ## Project Overview
-E-commerce telah menjadi tulang punggung ekonomi digital. Namun, dengan semakin banyaknya pilihan produk, pelanggan seringkali kewalahan dalam menemukan apa yang mereka butuhkan. Proyek sistem rekomendasi ini dirancang untuk memberikan solusi yang dapat meningkatkan pengalaman pengguna dengan menyajikan produk yang relevan berdasarkan preferensi mereka. Sistem rekomendasi telah menjadi komponen penting dalam berbagai industri, termasuk e-commerce, untuk membantu pelanggan menemukan produk yang sesuai di tengah banyaknya pilihan yang tersedia.
+E-commerce telah menjadi tulang punggung ekonomi digital. Namun, dengan semakin banyaknya pilihan produk, pelanggan seringkali kewalahan dalam menemukan apa yang mereka butuhkan. Proyek sistem rekomendasi ini dirancang untuk memberikan solusi yang dapat meningkatkan pengalaman pengguna dengan menyajikan produk yang relevan berdasarkan preferensi mereka. Sistem rekomendasi telah menjadi komponen penting dalam berbagai industri, termasuk e-commerce, untuk membantu pelanggan menemukan produk yang sesuai di tengah banyaknya pilihan yang tersedia [1].
 
-Proyek ini penting karena memungkinkan personalisasi pengalaman pengguna, yang pada akhirnya dapat meningkatkan tingkat kepuasan pelanggan, retensi, dan pendapatan perusahaan. Berdasarkan penelitian, sistem rekomendasi dapat meningkatkan konversi penjualan hingga 20-30%. Selain itu, dengan memanfaatkan data yang tersedia, perusahaan dapat memperoleh wawasan yang lebih baik tentang perilaku pelanggan.
+Proyek ini penting karena memungkinkan personalisasi pengalaman pengguna, yang pada akhirnya dapat meningkatkan tingkat kepuasan pelanggan, retensi, dan pendapatan perusahaan. Berdasarkan penelitian, sistem rekomendasi dapat meningkatkan konversi penjualan sebuah E-Commerce. Selain itu, dengan memanfaatkan data yang tersedia, perusahaan dapat memperoleh wawasan yang lebih baik tentang perilaku pelanggan[2].
 
 Hasil riset yang relevan dengan proyek ini mencakup:
-
-- [Pushpendra K, Ramjeevan ST (2018) "Recommendation system techniques and related issues: a survey",  International Journal of Information Technology Volume 10, pages 495–501](https://link.springer.com/article/10.1007/s41870-018-0138-8)
 - [Lioliang J, et.al (2018) "A trust‑based collaborative filtering algorithm for E‑commerce
 recommendation system", Journal of Ambient Intelligence and Humanized Computing Volume 10, pages 3023–3034](https://link.springer.com/article/10.1007/s12652-018-0928-7)
+- [Pushpendra K, Ramjeevan ST (2018) "Recommendation system techniques and related issues: a survey",  International Journal of Information Technology Volume 10, pages 495–501](https://link.springer.com/article/10.1007/s41870-018-0138-8)
 
 ## Business Understanding
 
@@ -281,10 +280,10 @@ Data yang sudah diproses ini digunakan untuk pemodelan dengan Content-Based Filt
 Pada proyek kali ini Sistem Rekomendasi dengan metode Content-Based Filtering dilakukan menggunakan metode Cosine Similarity. overview sedikit terkait cosine similarity.
 
 #### Konsep Cosine Similarity
-Cosine Similarity adalah sebuah metrik yang mengukur kemiripan antara dua vektor dengan menghitung kosinus sudut di antara keduanya. Dalam konteks content-based filtering pada sistem rekomendasi, vektor-vektor ini biasanya merepresentasikan fitur-fitur dari produk. Cosine Similarity mengukur kosinus sudut antara dua vektor item.
+Cosine Similarity adalah sebuah metrik yang mengukur kemiripan antara dua vektor dengan menghitung kosinus sudut di antara keduanya. Dalam konteks content-based filtering pada sistem rekomendasi, vektor-vektor ini biasanya merepresentasikan fitur-fitur dari produk. Cosine Similarity mengukur kosinus sudut antara dua vektor item[3].
 
 - **Cara Kerja:**
-  1.  **Representasi Fitur:** Setiap item direpresentasikan sebagai vektor fitur. Misalnya, untuk film, fiturnya bisa berupa genre (aksi, komedi, drama), sutradara, aktor, sinopsis (setelah diolah menggunakan teknik *Natural Language Processing/NLP*), dan sebagainya. Untuk Product Recomendation pada proyek ini Fitur category direpresentasikan sebagai vektor numerik. Fitur ini dikonversi menjadi nilai numerik, menggunakan *TF-IDF* (Term Frequency-Inverse Document Frequency)
+  1.  **Representasi Fitur:** Setiap item direpresentasikan sebagai vektor fitur. Misalnya, untuk film, fiturnya bisa berupa genre (aksi, komedi, drama), sutradara, aktor, sinopsis (setelah diolah menggunakan teknik *Natural Language Processing/NLP*), dan sebagainya. Untuk Product Recomendation pada proyek ini Fitur category direpresentasikan sebagai vektor numerik. Fitur ini dikonversi menjadi nilai numerik, menggunakan *TF-IDF* (Term Frequency-Inverse Document Frequency)[4].
   2.  Cosine Similarity dihitung menggunakan rumus berikut:
 
         $$Cosine Similarity(A, B) = \frac{A \cdot B}{||A|| \times ||B||}$$
@@ -315,7 +314,7 @@ dan berikut merupakan contoh lain untuk produk '100ml Pestisida Organik Neem Oil
 Didapati bahwa fungsi memberikan top 5 produk rekomendasi dengan skor nilai kemiripan yang paling tinggi
 
 ### **Collaborative Filterring**
-Pada proyek kali ini juga dibuat Sistem Rekomendasi dengan metode Collaborative Filtering dilakukan dengan Matrix Factorization. Matrix Factorization adalah salah satu pendekatan yang digunakan dalam sistem rekomendasi untuk memprediksi preferensi pengguna terhadap item berdasarkan pola yang sudah ada di data. Salah satu algoritma machine learning yang populer untuk matrix factorization adalah **Singular Value Decomposition (SVD)**.
+Pada proyek kali ini juga dibuat Sistem Rekomendasi dengan metode Collaborative Filtering dilakukan dengan Matrix Factorization. Matrix Factorization adalah salah satu pendekatan yang digunakan dalam sistem rekomendasi untuk memprediksi preferensi pengguna terhadap item berdasarkan pola yang sudah ada di data[3]. Salah satu algoritma machine learning yang populer untuk matrix factorization adalah **Singular Value Decomposition (SVD)**[5].
 
 #### Konsep Singular Value Decomposition (SVD)
 SVD adalah metode dekomposisi matriks yang memecah sebuah matriks \( R \) (misalnya matriks rating pengguna-item) menjadi tiga matriks:
@@ -344,7 +343,7 @@ dimana,
     - Matriks \( $$R'$$ \), hasil perkalian \( $$U$$ \), \( $$\Sigma$$ \), dan \( V^T \), merepresentasikan prediksi rating yang bisa diberikan pengguna terhadap item. Jika ada nilai kosong di matriks awal \( $$R$$ \), nilai tersebut akan terisi dengan prediksi rating.
 
   4. **Prediksi**:
-    - Dari matriks rekonstruksi \( $$R'$$ \), kita dapat memilih **Top-N Recommendation** untuk setiap pengguna berdasarkan prediksi rating tertinggi.
+    - Dari matriks rekonstruksi \( $$R'$$ \), kita dapat memilih **Top-N Recommendation** untuk setiap pengguna berdasarkan prediksi rating tertinggi [3].
 
 #### Implementasi pada projek
 1. Matriks `user_product_matrix` digunakan sebagai input untuk SVD ( $$R$$ ), dengan nilai-nya terlebih dahulu dilakukan normalisasi untuk memusatkan data, karena SVD bekerja paling baik ketika data terpusat di sekitar nol. Dengan memusatkan data, SVD akan lebih fokus pada variasi data, yaitu seberapa jauh setiap nilai menyimpang dari rata-rata. Jika data memiliki rata-rata yang tinggi, SVD mungkin akan lebih banyak menangkap perbedaan dalam seberapa jauh pengguna menyimpang dari rata-rata tinggi ini, daripada pola interaksi antara pengguna dan item yang sebenarnya.
@@ -416,7 +415,7 @@ Untuk mengevaluasi kinerja sistem rekomendasi, digunakan metrik-metrik berikut:
      $$\text{RMSE} = \sqrt{\frac{1}{N} \sum_{i=1}^{N} (y_i - \hat{y}_i)^2}$$
       
 
-Pemilihan metrik-metrik ini didasarkan pada kemampuan mereka untuk memberikan gambaran komprehensif terkait akurasi prediksi dan besarnya kesalahan, sesuai dengan tujuan proyek ini dalam mengevaluasi kualitas rekomendasi berbasis similarity dan prediksi rating.
+Pemilihan metrik-metrik ini didasarkan pada kemampuan mereka untuk memberikan gambaran komprehensif terkait akurasi prediksi dan besarnya kesalahan, sesuai dengan tujuan proyek ini dalam mengevaluasi kualitas rekomendasi berbasis similarity dan prediksi rating[4].
 
 ---
 
@@ -494,9 +493,12 @@ Kedua pendekatan menunjukkan kekuatan dan kelemahannya masing-masing, namun pene
 Dengan sistem rekomendasi yang dikembangkan, pengguna dapat menemukan produk yang sesuai dengan preferensi mereka, sekaligus membuka peluang bagi penjual untuk meningkatkan penjualan lintas kategori. Hasil ini menunjukkan bahwa integrasi pendekatan Content-Based Filtering dan Collaborative Filtering merupakan langkah strategis untuk memenuhi kebutuhan pengguna dan mendukung pertumbuhan bisnis.  
 
 ## Referensi
-- [Pushpendra K, Ramjeevan ST (2018) "Recommendation system techniques and related issues: a survey",  International Journal of Information Technology Volume 10, pages 495–501](https://link.springer.com/article/10.1007/s41870-018-0138-8)
-- [Lioliang J, et.al (2018) "A trust‑based collaborative filtering algorithm for E‑commerce
-recommendation system", Journal of Ambient Intelligence and Humanized Computing Volume 10, pages 3023–3034](https://link.springer.com/article/10.1007/s12652-018-0928-7)
-- [Pavlo P, et.al (2020) "Development and Analysis of Intelligent Recommendation System Using Machine Learning Approach", Integrated Computer Technologies in Mechanical Engineering pp 186-197](https://link.springer.com/chapter/10.1007/978-3-030-37618-5_17)
-- [Denise Chen (2020) "Recommender System — singular value decomposition (SVD) & truncated SVD", Diakses pada: Minggu,15 Desember 2024, Pukul 23.37 WIB](https://medium.com/@connectwithghosh/simple-matrix-factorization-example-on-the-movielens-dataset-using-pyspark-9b7e3f567536)
-- Modul Dicoding Machine Learning Terapan
+[1] [Lioliang J, et al. "A trust-based collaborative filtering algorithm for E-commerce recommendation system." Journal of Ambient Intelligence and Humanized Computing, vol. 10, pp. 3023-3034, 2018.](https://link.springer.com/article/10.1007/s12652-018-0928-7)
+
+[2] [Pushpendra K, Ramjeevan ST. "Recommendation system techniques and related issues: a survey." International Journal of Information Technology, vol. 10, pp. 495-501, 2018.](https://link.springer.com/article/10.1007/s41870-018-0138-8)
+
+[3] [Pavlo P, et al. "Development and Analysis of Intelligent Recommendation System Using Machine Learning Approach." Integrated Computer Technologies in Mechanical Engineering, pp. 186-197, 2020.](https://link.springer.com/chapter/10.1007/978-3-030-37618-5_17)
+
+[4] Dicoding. Machine Learning Terapan. Dicoding, 2024.
+
+[5] [Denise Chen. "Recommender System — singular value decomposition (SVD) & truncated SVD." Medium, 2020. Accessed December 15, 2024.](https://medium.com/@connectwithghosh/simple-matrix-factorization-example-on-the-movielens-dataset-using-pyspark-9b7e3f567536)
