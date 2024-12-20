@@ -543,3 +543,5 @@ Dengan sistem rekomendasi yang dikembangkan, pengguna dapat menemukan produk yan
 [4] Dicoding. Machine Learning Terapan. Dicoding, 2024.
 
 [5] [Denise Chen. "Recommender System — singular value decomposition (SVD) & truncated SVD." Medium, 2020. Accessed December 15, 2024.](https://medium.com/@connectwithghosh/simple-matrix-factorization-example-on-the-movielens-dataset-using-pyspark-9b7e3f567536)
+
+[6] [Weiqin Yang, et.al "Towards Optimizing Top-K Ranking Metrics in Recommender Systems" The International Conference on Learning Representations (ICLR) 2024.](https://openreview.net/forum?id=bHNVmLDtFo)
