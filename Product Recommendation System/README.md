@@ -391,7 +391,7 @@ Berdasarkan hasil tersebut dibuatlah fFungsi `recommend_products` dibuat, meneri
 didapati bahwa produk rekomendasi yang diberikan tidak hanya dari satu kategori yang sama.
 
 ## Evaluation
-Untuk mengevaluasi kinerja sistem rekomendasi, digunakan metrik-metrik berikut:  
+Untuk mengevaluasi kinerja sistem rekomendasi, digunakan metrik-metrik berikut untuk mengetahui sistem rekomendasi yang dibuat secara umum:  
 
 1. **Mean Absolute Error (MAE)**  
    - Mengukur rata-rata besar kesalahan dalam prediksi, memberikan skor yang mudah diinterpretasikan untuk akurasi prediksi.  
@@ -399,23 +399,41 @@ Untuk mengevaluasi kinerja sistem rekomendasi, digunakan metrik-metrik berikut:
      
      $$\text{MAE} = \frac{1}{N} \sum_{i=1}^{N} |y_i - \hat{y}_i|$$
       
-     Di mana \( $$y_i$$ \) adalah nilai aktual, \( $$\hat{y}_i$$ \) adalah nilai prediksi, dan \( $$N$$ \) adalah jumlah total prediksi.  
+     Di mana \( y_i \) adalah nilai aktual, \( \hat{y}_i \) adalah nilai prediksi, dan \( N \) adalah jumlah total prediksi.  
 
 2. **Mean Squared Error (MSE)**  
    - Menghitung rata-rata kuadrat perbedaan antara nilai prediksi dan aktual, dengan menekankan pada kesalahan yang lebih besar.  
    - Rumus:  
      
      $$\text{MSE} = \frac{1}{N} \sum_{i=1}^{N} (y_i - \hat{y}_i)^2$$
-     
 
 3. **Root Mean Squared Error (RMSE)**  
    - Memberikan nilai akar kuadrat dari MSE, mengembalikan hasil dalam skala data asli sekaligus memberikan penalti pada kesalahan yang lebih besar.  
    - Rumus:  
      
      $$\text{RMSE} = \sqrt{\frac{1}{N} \sum_{i=1}^{N} (y_i - \hat{y}_i)^2}$$
-      
 
-Pemilihan metrik-metrik ini didasarkan pada kemampuan mereka untuk memberikan gambaran komprehensif terkait akurasi prediksi dan besarnya kesalahan, sesuai dengan tujuan proyek ini dalam mengevaluasi kualitas rekomendasi berbasis similarity dan prediksi rating[4].
+Dan berikut merupakan metrik evaluasi yang ditujukan untuk mengetahui hasil rekomendasi berdasarkan relevansi rekomendasi yang diberikan:
+
+1. **Precision@K**
+   - Mengukur proporsi item relevan dalam K rekomendasi teratas.
+   - Rumus:
+
+     $$\text{Precision@K} = \frac{|\{\text{Relevan}\} \cap \{\text{Direkomendasikan Top-K}\}|}{K \text(Jumlah total item rekomendasi)\}$$
+
+2. **NDCG@K (Normalized Discounted Cumulative Gain)**
+   - Mengukur kualitas rekomendasi dengan mempertimbangkan urutan relevansi item yang direkomendasikan.
+   - Rumus:
+
+     $$\text{NDCG@K} = \frac{DCG@K}{IDCG@K}$$
+
+     $$\text{DCG@K} = \sum_{i=1}^{K} \frac{rel_i}{\log_2(i+1)}$$
+
+     Di mana,
+     - $$\( rel_i \)$$ adalah relevansi item di posisi $$\( i \)$$ dalam daftar rekomendasi.
+     - IDCG@K (Ideal Discounted Cumulative Gain at K) merupakan nilai DCG maksimum yang mungkin untuk suatu query dan nilai K tertentu. Dengan kata lain, ini adalah peringkat terbaik yang mungkin, di mana item yang paling relevan berada di peringkat teratas.
+
+Pemilihan metrik-metrik ini didasarkan pada kemampuan mereka untuk memberikan gambaran komprehensif terkait akurasi prediksi, relevansi rekomendasi, dan besarnya kesalahan, sesuai dengan tujuan proyek ini dalam mengevaluasi kualitas rekomendasi berbasis similarity dan prediksi rating [4][6].
 
 ---
 
@@ -430,9 +448,14 @@ Model **Content-Based Filtering** menggunakan algoritma Cosine Similarity untuk 
   - **MSE**: 0.0081  
   - **RMSE**: 0.09  
 
+- **Hasil Evaluasi Relevansi Rekomendasi**:
+  Hasil ini didapatkan dengan melihat hasil relevansi untuk produk "100ml Pestisida Organik Neem Oil /Minyak Mimba dari Biosfer Organik":
+  - **Precision@K**: 0.8
+  - **NDCG@K**: 1.0 
+
 Hasil ini menunjukkan tingkat kesalahan prediksi yang sangat rendah, mencerminkan akurasi tinggi untuk pendekatan berbasis konten. Namun, model ini memiliki beberapa keterbatasan:  
 - Rekomendasi hanya terbatas pada produk dalam kategori yang sama, karena skor kesamaan untuk produk di luar kategori sangat rendah.  
-- Untuk produk dalam kategori yang sama, model menghasilkan skor kesamaan hingga 100%, tetapi kurang memberikan variasi rekomendasi.  
+- Untuk produk dalam kategori yang sama, model menghasilkan skor kesamaan hingga 100%, tetapi kurang memberikan variasi rekomendasi. ditunjukan dalam hasil metrik evaluasi relevansi, nilai presisi berkurang karena ada 1 produk dari hasil rekomendasi berasal dari kategori berbeda.  
 
 Pendekatan ini cocok untuk kasus yang sangat spesifik, seperti merekomendasikan produk pelengkap dalam satu kategori tertentu. Namun, pendekatan ini kurang efektif dalam memperluas eksposur pelanggan ke kategori produk lainnya.  
 
@@ -440,14 +463,32 @@ Pendekatan ini cocok untuk kasus yang sangat spesifik, seperti merekomendasikan 
 
 Model **Collaborative Filtering** menggunakan algoritma Singular Value Decomposition (SVD). Berbeda dengan pendekatan berbasis konten, metode ini memanfaatkan data interaksi pengguna-item untuk menangkap pola laten dan hubungan lintas kategori.  
 
-- **Hasil Evaluasi**:  
+- **Hasil Evaluasi Keseluruhan Model**:  
   - **MAE**: 0.504  
   - **MSE**: 0.703  
-  - **RMSE**: 0.838  
+  - **RMSE**: 0.838
+
+- **Hasil Evaluasi Relevansi Rekomendasi**:
+  Hasil ini didapatkan dengan mengambil sample dari keseluruhan data rating awal `user_product_matrix` sebagai ground truth dan sample dari hasil prediksi `predicted_ratings_df`. Pengambilan sample dilakukan dengan cara:
+  ```
+  k = 10
+  sample_predictions = {
+      user: predicted_ratings_df.loc[user].sort_values(ascending=False).head(k).index.tolist()
+      for user in predicted_ratings_df.index
+  }
+
+  ground_truth = {
+      user: ratings.sort_values(ascending=False).index.tolist()
+      for user, ratings in user_product_matrix.iterrows()
+  }
+  ```
+  dimana hasil perhitungan precision@K dan NDCG@K sebagai berikut:
+  - **Precision@K**: 1.0
+  - **NDCG@K**: 1.0  
 
 Meskipun metrik error lebih besar dibandingkan model Content-Based Filtering, pendekatan Collaborative Filtering menunjukkan keunggulan signifikan:  
 - Dapat memberikan rekomendasi lintas kategori, sehingga lebih cocok untuk mendorong penjualan produk secara keseluruhan.  
-- Mengatasi keterbatasan rekomendasi berbasis kategori, memperluas cakupan rekomendasi, dan meningkatkan unsur *serendipity* (penemuan produk yang tidak terduga).  
+- Mengatasi keterbatasan rekomendasi berbasis kategori, memperluas cakupan rekomendasi, dan meningkatkan unsur *serendipity* (penemuan produk yang tidak terduga) dengan tetap emiliki relevansi yang baik.
 
 ### Kelebihan dan Kekurangan Algoritma  
 #### **Cosine Similarity**  
@@ -488,9 +529,9 @@ Berdasarkan analisis yang dilakukan, sistem rekomendasi dirancang untuk menjawab
    - Meskipun error metrik seperti MAE, MSE, dan RMSE lebih besar dibandingkan pendekatan Content-Based Filtering, model ini lebih unggul dalam meningkatkan potensi penjualan produk secara keseluruhan dengan mencakup berbagai kategori.  
 
 ### Hasil dan Dampak  
-Kedua pendekatan menunjukkan kekuatan dan kelemahannya masing-masing, namun penerapan keduanya secara paralel memberikan nilai tambah dalam menciptakan pengalaman pengguna yang lebih personal dan menyeluruh. Evaluasi menggunakan metrik seperti MAE, MSE, dan RMSE menunjukkan bahwa sistem rekomendasi telah memenuhi tujuan utama: memberikan rekomendasi produk yang relevan dan dapat diandalkan.  
+Kedua pendekatan menunjukkan kekuatan dan kelemahannya masing-masing, namun penerapan keduanya secara paralel memberikan nilai tambah dalam menciptakan pengalaman pengguna yang lebih personal dan menyeluruh. Evaluasi menggunakan metrik seperti MAE, MSE, RMSE, Precision@K, dan NDCG@K menunjukkan bahwa sistem rekomendasi telah memenuhi tujuan utama: memberikan rekomendasi produk yang relevan dan dapat diandalkan.  
 
-Dengan sistem rekomendasi yang dikembangkan, pengguna dapat menemukan produk yang sesuai dengan preferensi mereka, sekaligus membuka peluang bagi penjual untuk meningkatkan penjualan lintas kategori. Hasil ini menunjukkan bahwa integrasi pendekatan Content-Based Filtering dan Collaborative Filtering merupakan langkah strategis untuk memenuhi kebutuhan pengguna dan mendukung pertumbuhan bisnis.  
+Dengan sistem rekomendasi yang dikembangkan, pengguna dapat menemukan produk yang sesuai dengan preferensi mereka, sekaligus membuka peluang bagi penjual untuk meningkatkan penjualan lintas kategori. Hasil ini menunjukkan bahwa integrasi pendekatan Content-Based Filtering dan Collaborative Filtering merupakan langkah strategis untuk memenuhi kebutuhan pengguna dan mendukung pertumbuhan bisnis.
 
 ## Referensi
 [1] [Lioliang J, et al. "A trust-based collaborative filtering algorithm for E-commerce recommendation system." Journal of Ambient Intelligence and Humanized Computing, vol. 10, pp. 3023-3034, 2018.](https://link.springer.com/article/10.1007/s12652-018-0928-7)
