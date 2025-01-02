@@ -5,6 +5,12 @@
 
 -------------------
 > Full Documentation provide end-to-end Data Science Flow
+
+> In this portofolio I've already done:
+* Predictive Analysis
+* Recomendation System
+* NLP
+* Dashboarding
 -------------------
 
 ## [📌Loan Risk Profiling Based on Customer Behaviors](https://github.com/Haniff-Toha/DataScience_Portofolio/tree/main/Loan%20Risk%20Profiling%20Based%20on%20Customer%20Behaviors)
