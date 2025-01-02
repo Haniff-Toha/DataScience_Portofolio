@@ -219,6 +219,21 @@ This recommendation system successfully meets the goal of **personalized product
 - **Collaborative Filtering** provides a **wider scope**, making it more suitable for encouraging cross-category product discovery.
 
 
+--------------------------------
+
+## 📌Flip (Indonesian Payment & E-Money App) Sentiment Analysis
+[![Full Documentaion!](https://img.shields.io/badge/Full-Documentation-1abc9c.svg)](https://github.com/Haniff-Toha/DataScience_Portofolio/tree/main/Loan%20Risk%20Profiling%20Based%20on%20Customer%20Behaviors)
+<p>-</p>
+
+### Business understanding
+- *Problem*
+  - -.
+- *Goals and Objective*
+  - -.
+
+### Solution 
+
+
 ---------------------------
 ## 📌 [E-Commerce Dataset EDA and Streamlit Dashboard](https://github.com/Haniff-Toha/DataScience_Portofolio/blob/main/E-Commerce-Public-Dataset-EDA-Dashboard)
 [![Full Documentaion!](https://img.shields.io/badge/Full-Documentation-1abc9c.svg)](https://github.com/Haniff-Toha/DataScience_Portofolio/tree/main/E-Commerce-Public-Dataset-EDA-Dashboard)
@@ -298,7 +313,7 @@ The solution involves creating an interactive Streamlit dashboard that:
 - **Purpose**: Enhances customer retention and loyalty strategies.  
 
 --------------------------
-## 📌Comming Soon (5)
+## 📌Comming Soon (6)
 [![Full Documentaion!](https://img.shields.io/badge/Full-Documentation-1abc9c.svg)](https://github.com/Haniff-Toha/DataScience_Portofolio/tree/main/Loan%20Risk%20Profiling%20Based%20on%20Customer%20Behaviors)
 <p>-</p>
 
