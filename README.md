@@ -92,8 +92,10 @@ Using **SHAP (SHapley Additive exPlanations)** values, the most influential fact
 
 #### **Compensation and Stock Options**
 
-  ![Attrition by Monthly Income](HR%20Employee%20Attrition%20Analysis%20and%20Prediction/predictive_analysis_image/eda_attrition_income.png)
-  ![Stock Option Levels](HR%20Employee%20Attrition%20Analysis%20and%20Prediction/predictive_analysis_image/eda_attrition_stock.png)
+<div style="display: flex; justify-content: space-between; align-items: center;">
+    <img src="HR%20Employee%20Attrition%20Analysis%20and%20Prediction/predictive_analysis_image/eda_attrition_income.png" alt="Attrition by Monthly Income" style="width: 45%;"/>
+    <img src="HR%20Employee%20Attrition%20Analysis%20and%20Prediction/predictive_analysis_image/eda_attrition_stock.png" alt="Stock Option Levels" style="width: 53%;"/>
+</div>
 
 - Employees with lower monthly income and stock option levels exhibit higher attrition.
 - **Recommendation**:
