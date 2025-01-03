@@ -227,9 +227,11 @@ This recommendation system successfully meets the goal of **personalized product
 
 --------------------------------
 
-## 📌Flip (Indonesian Payment & E-Money App) Sentiment Analysis
-[![Full Documentaion!](https://img.shields.io/badge/Full-Documentation-1abc9c.svg)](https://github.com/Haniff-Toha/DataScience_Portofolio/tree/main/Loan%20Risk%20Profiling%20Based%20on%20Customer%20Behaviors)
-<p>-</p>
+## 📌[Flip (Indonesian Payment & E-Money App) Sentiment Analysis](https://github.com/Haniff-Toha/DataScience_Portofolio/tree/main/Flip%20(Indonesian%20Payment%20%26%20E-Money%20App)%20Sentiment%20Analysis)
+[![Full Documentaion!](https://img.shields.io/badge/Full-Documentation-1abc9c.svg)](https://github.com/Haniff-Toha/DataScience_Portofolio/tree/main/Flip%20(Indonesian%20Payment%20%26%20E-Money%20App)%20Sentiment%20Analysis)
+[![Jupyter Notebook](https://img.shields.io/badge/Jupyter-Notebook-orange?style=for-the-badge&logo=Jupyter)](https://github.com/Haniff-Toha/DataScience_Portofolio/blob/main/Flip%20(Indonesian%20Payment%20%26%20E-Money%20App)%20Sentiment%20Analysis/Sentimen%20Analisis%20Flip.ipynb)
+
+<p>Report still under develpoment - please walk through the jupyter notebook</p>
 
 ### Business understanding
 - *Problem*
@@ -241,7 +243,7 @@ This recommendation system successfully meets the goal of **personalized product
 
 
 ---------------------------
-## 📌 [E-Commerce Dataset EDA and Streamlit Dashboard](https://github.com/Haniff-Toha/DataScience_Portofolio/blob/main/E-Commerce-Public-Dataset-EDA-Dashboard)
+## 📌 [Brazilian E-Commerce RFM Analysis, EDA, and Dashboarding](https://github.com/Haniff-Toha/DataScience_Portofolio/blob/main/E-Commerce-Public-Dataset-EDA-Dashboard)
 [![Full Documentaion!](https://img.shields.io/badge/Full-Documentation-1abc9c.svg)](https://github.com/Haniff-Toha/DataScience_Portofolio/tree/main/E-Commerce-Public-Dataset-EDA-Dashboard)
 [![Streamlit Dashboard!](https://img.shields.io/badge/Streamlit-Dashboard-orange.svg)](https://datascienceportofolio-3tx46xtd99g9hjqskj9xau.streamlit.app/)
 
