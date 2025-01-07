@@ -1,6 +1,6 @@
 # Haniff's Data Science Portfolio
 
-<p>👋😁 Hello! I'm Haniff, a Wanna Be Data Scientist, passionate about solving real-world problems through data. My curiosity and enthusiasm for data-driven technologies have grown stronger, and I'm on a mission to leverage data to make informed decisions and drive meaning and impactful change in this dynamic and evolving field.</p>
+<p>👋😁 Hello! I'm Haniff, a Wanna Be Data Scientist, passionate about solving real-world problems through data. My curiosity and enthusiasm for data-driven data-driven decision-making & technologies have grown stronger, and I'm on a mission to leverage data to make informed decisions and drive meaning and impactful change in this dynamic and evolving field.</p>
 
 
 -------------------
