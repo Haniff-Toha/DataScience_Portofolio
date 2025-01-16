@@ -4,8 +4,6 @@
 
 
 -------------------
-> Full Documentation provide end-to-end Data Science Flow
-
 > In this portofolio I've already done:
 * Predictive Analysis
 * Recomendation System
@@ -16,6 +14,7 @@
 ## [📌Loan Risk Profiling Based on Customer Behaviors](https://github.com/Haniff-Toha/DataScience_Portofolio/tree/main/Loan%20Risk%20Profiling%20Based%20on%20Customer%20Behaviors)
 
 [![Full Documentaion!](https://img.shields.io/badge/Full-Documentation-1abc9c.svg)](https://github.com/Haniff-Toha/DataScience_Portofolio/tree/main/Loan%20Risk%20Profiling%20Based%20on%20Customer%20Behaviors)
+[![Jupyter Notebook](https://img.shields.io/badge/Jupyter-Notebook-orange?style=for-the-badge&logo=Jupyter)](https://github.com/Haniff-Toha/DataScience_Portofolio/blob/main/Loan%20Risk%20Profiling%20Based%20on%20Customer%20Behaviors/Final_Project_Kelompok_4%2C_08sep23.ipynb)
 
 <p>Insight Co. Ltd. is a rapidly growing fintech company that provides loan services that helps people from all levels get the funds they need and make fortune from interest rates. As the company continues to expand, this company face the challenge of a rising number of loan applications, which has led to time-consuming and costly assessments by our team. Also this company had default rate of 12.3%, which needs to minimize the risks for maintaining the stability of company's cash flow.</p>
 
@@ -37,7 +36,8 @@ Based on our Exploratory Data Analysis;
 
 ---------------------------
 ## 📌[Improving Employee Retention by Predicting Employee Attrition Using ML](https://github.com/Haniff-Toha/DataScience_Portofolio/tree/main/HR%20Employee%20Attrition%20Analysis%20and%20Prediction)
-[![Full Documentaion!](https://img.shields.io/badge/Full-Documentation-1abc9c.svg)](https://github.com/Haniff-Toha/DataScience_Portofolio/tree/main/Improving%20Employee%20Retention%20by%20Predicting%20Employee%20Attrition%20Using%20ML)
+[![Full Documentaion!](https://img.shields.io/badge/Full-Documentation-1abc9c.svg)](https://github.com/Haniff-Toha/DataScience_Portofolio/tree/main/HR%20Employee%20Attrition%20Analysis%20and%20Prediction)
+[![Jupyter Notebook](https://img.shields.io/badge/Jupyter-Notebook-orange?style=for-the-badge&logo=Jupyter)](https://github.com/Haniff-Toha/DataScience_Portofolio/blob/main/HR%20Employee%20Attrition%20Analysis%20and%20Prediction/Predictive_Analysis_HR.ipynb)
 
 <p>Employee attrition is a significant concern for organizations, leading to increased recruitment and training costs, as well as disruptions in workforce stability. This project employs machine learning techniques to address the challenge by accurately predicting employee attrition, identifying key factors influencing it, and providing actionable recommendations for enhancing retention strategies.</p>
 
@@ -110,6 +110,7 @@ Using **SHAP (SHapley Additive exPlanations)** values, the most influential fact
 
 ### **Future Directions**
 ![Rekomendasi Implementasi Model](HR%20Employee%20Attrition%20Analysis%20and%20Prediction/predictive_analysis_image/implement_recom.png)
+
 1. **Predictive Analytics Integration**:
    - Implement the CatBoost model into HR workflows for real-time monitoring.
    - Develop a dashboard to track and visualize trends.
@@ -128,6 +129,7 @@ By addressing key attrition drivers and implementing data-driven HR policies, th
 --------------------------
 ## 📌[Indonesian Farmer's E-Commerce Product Recommendation System](https://github.com/Haniff-Toha/DataScience_Portofolio/tree/main/Product%20Recommendation%20System)
 [![Full Documentaion!](https://img.shields.io/badge/Full-Documentation-1abc9c.svg)](https://github.com/Haniff-Toha/DataScience_Portofolio/tree/main/Product%20Recommendation%20System)
+[![Jupyter Notebook](https://img.shields.io/badge/Jupyter-Notebook-orange?style=for-the-badge&logo=Jupyter)](https://github.com/Haniff-Toha/DataScience_Portofolio/blob/main/Product%20Recommendation%20System/Product%20Recomendation.ipynb)
 
 <p>E-commerce has become the backbone of the digital economy, but with the increasing number of product choices, customers often feel overwhelmed in finding what they need. This recommendation system project aims to address this challenge by offering relevant product suggestions based on user preferences, enhancing the overall shopping experience. Recommendation systems have become a crucial component across industries, especially in e-commerce, to help customers navigate the vast array of options available. This project is significant as it enables personalized user experiences, which can ultimately improve customer satisfaction, retention, and company revenue. Research has shown that recommendation systems can boost sales conversions, and by leveraging available data, companies can gain better insights into customer behavior.</p>
 
@@ -246,6 +248,7 @@ This recommendation system successfully meets the goal of **personalized product
 ## 📌 [Brazilian E-Commerce RFM Analysis, EDA, and Dashboarding](https://github.com/Haniff-Toha/DataScience_Portofolio/blob/main/E-Commerce-Public-Dataset-EDA-Dashboard)
 [![Full Documentaion!](https://img.shields.io/badge/Full-Documentation-1abc9c.svg)](https://github.com/Haniff-Toha/DataScience_Portofolio/tree/main/E-Commerce-Public-Dataset-EDA-Dashboard)
 [![Streamlit Dashboard!](https://img.shields.io/badge/Streamlit-Dashboard-orange.svg)](https://datascienceportofolio-3tx46xtd99g9hjqskj9xau.streamlit.app/)
+[![Jupyter Notebook](https://img.shields.io/badge/Jupyter-Notebook-orange?style=for-the-badge&logo=Jupyter)](https://github.com/Haniff-Toha/DataScience_Portofolio/blob/main/E-Commerce-Public-Dataset-EDA-Dashboard/submission_MH.ipynb)
 
 This project is a data analysis and visualization dashboard built using **Streamlit**, focused on analyzing various trends in e-commerce data, including product performance, geographical sales distribution, customer behavior, and review analysis. The dashboard provides an interactive interface to explore key metrics, such as:
 
