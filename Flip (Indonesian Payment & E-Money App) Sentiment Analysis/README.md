@@ -82,11 +82,6 @@ The project compared three methods for sentiment classification:
    - Reliable performance for basic transactions  
 
 ---
-
-Here’s the updated **Predictive Modeling** section for your README file:  
-
----
-
 ## Predictive Modeling  
 
 To predict the sentiment of user reviews, several machine learning models were implemented and evaluated using two different data splitting schemes (80:20 and 70:30 train-test splits). The models were evaluated based on their training and testing accuracy to assess their generalization capability.  
