@@ -2,6 +2,8 @@
 
 **file Dataset** : https://www.kaggle.com/datasets/mostafaabla/garbage-classification/code?datasetId=1115942&sortBy=relevance
 
+**Project Implementation**:
+
 ![Project_mockup](https://github.com/Haniff-Toha/DataScience_Portofolio/blob/main/Garbage%20Classification%20Web-App/inferensi_tfjs.gif)
 
 ## Overview
