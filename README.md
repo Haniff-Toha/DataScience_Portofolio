@@ -395,9 +395,8 @@ The solution involves creating an interactive Streamlit dashboard that:
 - **Purpose**: Enhances customer retention and loyalty strategies.  
 
 --------------------------
-## 📌[Garbage Classification Web-App] ()
-[![Full Documentaion!](https://img.shields.io/badge/Full-Documentation-1abc9c.svg)](https://github.com/Haniff-Toha/DataScience_Portofolio/tree/main/Loan%20Risk%20Profiling%20Based%20on%20Customer%20Behaviors)
-<p>-</p>
+## 📌[Garbage Classification Web-App](https://github.com/Haniff-Toha/DataScience_Portofolio/tree/main/Garbage%20Classification%20Web-App)
+[![Full Documentaion!](https://img.shields.io/badge/Full-Documentation-1abc9c.svg)](https://github.com/Haniff-Toha/DataScience_Portofolio/tree/main/Garbage%20Classification%20Web-App)
 
 ![Project implementation](https://github.com/Haniff-Toha/DataScience_Portofolio/blob/main/Garbage%20Classification%20Web-App/inferensi_tfjs.gif)
 
@@ -417,8 +416,3 @@ The solution is enhanced by integrating the trained model into a web application
 TensorFlow.js (TFJS), enabling real-time predictions directly in the browser. This approach
 not only provides scalability but also ensures accessibility without the need for server-side
 computing, making it ideal for deployment in resource-constrained settings
-- -.
-
-### _Business Recomendation_
-Based on our Exploratory Data Analysis;
-- -.
