@@ -395,17 +395,28 @@ The solution involves creating an interactive Streamlit dashboard that:
 - **Purpose**: Enhances customer retention and loyalty strategies.  
 
 --------------------------
-## 📌Comming Soon (6)
+## 📌[Garbage Classification Web-App] ()
 [![Full Documentaion!](https://img.shields.io/badge/Full-Documentation-1abc9c.svg)](https://github.com/Haniff-Toha/DataScience_Portofolio/tree/main/Loan%20Risk%20Profiling%20Based%20on%20Customer%20Behaviors)
 <p>-</p>
 
-### Business understanding
-- *Problem*
-  - -.
-- *Goals and Objective*
-  - -.
+![Project implementation](https://github.com/Haniff-Toha/DataScience_Portofolio/blob/main/Garbage%20Classification%20Web-App/inferensi_tfjs.gif)
 
-### Solution 
+### Background
+The increasing problem of waste management has become a critical environmental
+challenge globally. Proper waste segregation is essential for efficient recycling and
+minimizing environmental impact. However, manual sorting processes are often laborintensive and prone to errors.
+
+### Challenge
+To address this challenge, this project explores the application of Machine Learning to
+automate garbage classification. By leveraging image data and training advanced
+classification models, this system aims to accurately identify and categorize garbage into
+predefined classes.
+
+### Solution
+The solution is enhanced by integrating the trained model into a web application using
+TensorFlow.js (TFJS), enabling real-time predictions directly in the browser. This approach
+not only provides scalability but also ensures accessibility without the need for server-side
+computing, making it ideal for deployment in resource-constrained settings
 - -.
 
 ### _Business Recomendation_
