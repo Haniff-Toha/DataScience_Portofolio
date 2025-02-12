@@ -144,7 +144,7 @@ Penjelasan:
 2. Statistik Deskriptif
    - **Data Numerik**
      
-![Alt text](predictive_analysis_image/describe_num.png)
+![Alt text](https://github.com/Haniff-Toha/DataScience_Portofolio/blob/main/HR%20Employee%20Attrition%20Analysis%20and%20Prediction/predictive_analysis_Image/describe_num.png)
 
    - Berdasarkan statistik deskriptif untuk data numerik, berikut adalah beberapa wawasan yang dapat diambil:
       - **Age (Usia)**:Rata-rata usia karyawan adalah **36.92 tahun**, dengan nilai **terendah 18 tahun** dan nilai **tertinggi 60 tahun**. Sebagian besar karyawan berada pada rentang usia antara **30 hingga 43 tahun**, yang menunjukkan bahwa perusahaan didominasi oleh karyawan yang cukup berpengalaman tetapi masih dalam rentang usia produktif.
@@ -161,7 +161,7 @@ Penjelasan:
 
       - Data Kategorikal
 
-![Alt text](predictive_analysis_image/describe_num.png)
+![Alt text](https://github.com/Haniff-Toha/DataScience_Portofolio/blob/main/HR%20Employee%20Attrition%20Analysis%20and%20Prediction/predictive_analysis_Image/describe_cat.png)
 
    - Berdasarkan statistik deskriptif untuk data kategorikal, berikut adalah beberapa wawasan yang dapat diambil:
       - **Attrition (Tingkat Perputaran Karyawan)**: Mayoritas karyawan adalah **karyawan yang tidak mengundurkan diri (1233 karyawan)**, dengan hanya **237 karyawan yang mengundurkan diri**. Hal ini menunjukkan bahwa perusahaan memiliki tingkat retensi karyawan yang cukup baik.
@@ -188,12 +188,12 @@ Penjelasan:
 3. Univariate Analysis
    - Data Numerik
       - **Boxplot** digunakan untuk melihat adanya outlier atau tidak dalam data
-      - ![Alt text](predictive_analysis_image/eda_uni_num_box.png)
+      - ![Alt text](https://github.com/Haniff-Toha/DataScience_Portofolio/blob/main/HR%20Employee%20Attrition%20Analysis%20and%20Prediction/predictive_analysis_Image/eda_uni_num_box.png)
          - **Outlier Detection:**  
              Beberapa kolom numerik menunjukkan keberadaan outlier, seperti:  
               `MonthlyIncome`, `NumCompaniesWorked`, `PerformanceRating`, `StockOptionLevel`, `TotalWorkingYears`, `WorkLifeBalance`, `YearsAtCompany`, `YearsInCurrentRole`, `YearsSinceLastPromotion`, dan `YearsWithCurrManager`.
       - **Histogram** digunakan untuk menganalisis distribusi data
-      - ![Alt text](predictive_analysis_image/eda_uni_num_hist.png)
+      - ![Alt text](https://github.com/Haniff-Toha/DataScience_Portofolio/blob/main/HR%20Employee%20Attrition%20Analysis%20and%20Prediction/predictive_analysis_Image/eda_uni_num_hist.png)
         - **Distribusi Positively Skewed:**  
      Beberapa kolom numerik menunjukkan distribusi yang miring ke kanan (positively skewed) yang menunjukan karyawan dengan pengalaman rendah, gaji rendah, entry level, lebih banyak daripada karyawan yang senior. Perbedaan yang besar antara mean dan median pada kolom seperti `MonthlyIncome` menunjukkan distribusi data yang tidak simetris.
         - **Kolom dengan Nilai Konstan:**  
@@ -201,23 +201,23 @@ Penjelasan:
 
    - Data Kategorikal
       - **bar Plot**: Menampilkan jumlah kategori untuk melihat distribusi mayoritas karyawan.
-      - ![Alt text](predictive_analysis_image/eda_uni_cat_bar.png)
+      - ![Alt text](https://github.com/Haniff-Toha/DataScience_Portofolio/blob/main/HR%20Employee%20Attrition%20Analysis%20and%20Prediction/predictive_analysis_Image/eda_uni_cat_bar.png)
         - **Frekuensi Data Kategorikal:**  
      Beberapa variabel kategorikal menunjukkan distribusi yang tidak merata, seperti `Attrition` yang lebih dominan pada satu kategori dibandingkan lainnya.
         
       - **Pie Chart**: Menunjukkan proporsi distribusi karyawan berdasarkan tiap kategori.
-      - ![Alt text](predictive_analysis_image/eda_uni_cat_pie.png)
-      - ![Alt text](predictive_analysis_image/eda_uni_cat_pie2.png)
+      - ![Alt text](https://github.com/Haniff-Toha/DataScience_Portofolio/blob/main/HR%20Employee%20Attrition%20Analysis%20and%20Prediction/predictive_analysis_Image/eda_uni_cat_pie.png)
+      - ![Alt text](https://github.com/Haniff-Toha/DataScience_Portofolio/blob/main/HR%20Employee%20Attrition%20Analysis%20and%20Prediction/predictive_analysis_Image/eda_uni_cat_pie2.png)
         - Distribusi kolom kategorikal bervariasi namun setiap kolom menunjukkan adanya nilai yang dominan dibandingkan dengan nilai lainnya 
 
 4. Bivariate ANalysis
    - **Violin Plot**: Digunakan untuk menganalisis distribusi data numerik berdasarkan kategori `Attrition`
-    ![Alt text](predictive_analysis_image/eda_bi_vio.png)
+    ![Alt text](https://github.com/Haniff-Toha/DataScience_Portofolio/blob/main/HR%20Employee%20Attrition%20Analysis%20and%20Prediction/predictive_analysis_Image/eda_bi_vio.png)
      - Berkaitan dengan kolom numerik menunjukkan distribusi yang miring ke kanan (positively skewed) yang menunjukan karyawan dengan pengalaman rendah, gaji rendah, entry level, lebih banyak daripada karyawan yang senior.
 
 5. Multivariate Analysis
    - **heat map** digunakan untuk melihat korelasi antara variabel numerik utama.
-   - ![Alt text](predictive_analysis_image/eda_mul_map.png)
+   - ![Alt text](https://github.com/Haniff-Toha/DataScience_Portofolio/blob/main/HR%20Employee%20Attrition%20Analysis%20and%20Prediction/predictive_analysis_Image/eda_mul_map.png)
      - **Observasi Multivariate Analysis:**
    - **Multicollinearity Antar Fitur:**  
      Terdapat korelasi tinggi antara beberapa fitur, yang menunjukkan adanya multicollinearity: 
@@ -362,7 +362,7 @@ Metrik evaluasi yang digunakan dalam proyek ini didasarkan pada informasi dari c
 
 #### **Hasil Perbandingan Model**  
 Hasil evaluasi kelima model diukur menggunakan metrik seperti akurasi, presisi, recall, dan F1-score. Berikut adalah perbandingan performa model:  
-![Perbandingan Model](predictive_analysis_image/algoritma_comp.png)  
+![Perbandingan Model](https://github.com/Haniff-Toha/DataScience_Portofolio/blob/main/HR%20Employee%20Attrition%20Analysis%20and%20Prediction/predictive_analysis_Image/algoritma_comp.png) 
 
 Berdasarkan hasil pelatihan, model **CatBoost** menunjukkan nilai *trade-off* terbaik di antara keempat metrik evaluasi. Oleh karena itu, model **CatBoost** dipilih sebagai model terbaik untuk tugas prediksi ini.  
 
@@ -380,17 +380,16 @@ Hasil terbaik diperoleh dengan kombinasi parameter berikut:
 - **l2_leaf_reg**: 3  
 
 Hasil evaluasi model setelah tuning dibandingkan dengan model tanpa tuning:  
-![Perbandingan Tuning](predictive_analysis_image/catboost_tune_vs_no.png)  
-
+![Perbandingan Tuning](https://github.com/Haniff-Toha/DataScience_Portofolio/blob/main/HR%20Employee%20Attrition%20Analysis%20and%20Prediction/predictive_analysis_Image/catboost_tune_vs_no.png)
 Namun, model **CatBoost tanpa tuning** tetap menunjukkan performa yang lebih baik dibandingkan model setelah tuning. Oleh karena itu, model tanpa tuning digunakan dalam solusi akhir. 
 
 - Dengan Confussion Metrics sebagai berikut,
 
-![Consuffion Metrics CB](predictive_analysis_image/cm_catboost.png) 
+![Consuffion Metrics CB](https://github.com/Haniff-Toha/DataScience_Portofolio/blob/main/HR%20Employee%20Attrition%20Analysis%20and%20Prediction/predictive_analysis_Image/cm_catboost.png)
 
 - Feature Importance Shap Value pada model CatBoost,
 
-![Shap CB](predictive_analysis_image/shap_cb.png) 
+![Shap CB](https://github.com/Haniff-Toha/DataScience_Portofolio/blob/main/HR%20Employee%20Attrition%20Analysis%20and%20Prediction/predictive_analysis_Image/shap_cb.png)
 
 Berdasarkan Diagram SHAP (SHapley Additive exPlanations), didapati beberapa variabel memberikan pengaruh yang signifikan pada klasifikasi model. Variabel-variabel yang paling berkontribusi dalam memisahkan klasifikasi adalah sebagai berikut:
    
@@ -417,7 +416,7 @@ Berdasarkan hasil analisis dari proses pemodelan dan *exploratory data analysis*
 1. **Pengembangan Karier (Career Development)**  
 - **Fokus pada Entry dan Junior Level**:
 
-![alt text](predictive_analysis_image/eda_attrition_joblevel.png) 
+![alt text](https://github.com/Haniff-Toha/DataScience_Portofolio/blob/main/HR%20Employee%20Attrition%20Analysis%20and%20Prediction/predictive_analysis_Image/eda_attrition_joblevel.png) 
 
   Distribusi karyawan menunjukkan bahwa mayoritas karyawan berada pada *Entry Level* (Level 1) dan *Junior Level* (Level 2). Tingkat *attrition* tertinggi terdapat pada *Entry Level* sebesar 26,3%, diikuti *Mid Level* sebesar 14,7%.  
   - **Rekomendasi**:  
@@ -427,8 +426,7 @@ Berdasarkan hasil analisis dari proses pemodelan dan *exploratory data analysis*
 2. **Lingkungan Kerja yang Seimbang (Work-Life Balance)**  
 - **Overtime dan Work-Life Balance**:
 
-![alt text](predictive_analysis_image/eda_attrition_ovt_wlb.png)
-
+![alt text](https://github.com/Haniff-Toha/DataScience_Portofolio/blob/main/HR%20Employee%20Attrition%20Analysis%20and%20Prediction/predictive_analysis_Image/eda_attrition_ovt_wlb.png)
   Data menunjukkan bahwa karyawan yang sering lembur (*overtime*) memiliki risiko *attrition* lebih tinggi. Selain itu, karyawan dengan penilaian *Work-Life Balance* yang buruk juga cenderung lebih mungkin untuk meninggalkan perusahaan.  
   - **Rekomendasi**:  
     - Kurangi frekuensi lembur dengan cara mendistribusikan beban kerja secara lebih merata di antara tim.  
@@ -438,7 +436,7 @@ Berdasarkan hasil analisis dari proses pemodelan dan *exploratory data analysis*
 3. **Insentif Saham Karyawan (Employee Stock Option)**  
 - **Pentingnya Tingkat Stock Option**:  
 
-![alt text](predictive_analysis_image/eda_attrition_stock.png)
+![alt text](https://github.com/Haniff-Toha/DataScience_Portofolio/blob/main/HR%20Employee%20Attrition%20Analysis%20and%20Prediction/predictive_analysis_Image/eda_attrition_stock.png)
   
   Karyawan dengan *stock option* rendah menunjukkan risiko *attrition* yang lebih tinggi.  
   - **Rekomendasi**:  
@@ -448,7 +446,7 @@ Berdasarkan hasil analisis dari proses pemodelan dan *exploratory data analysis*
 4. **Pengelolaan Pendapatan Bulanan (Monthly Income)**  
 - **Risiko Attrition pada Penghasilan Rendah**:
 
-![alt text](predictive_analysis_image/eda_attrition_income.png)
+![alt text](https://github.com/Haniff-Toha/DataScience_Portofolio/blob/main/HR%20Employee%20Attrition%20Analysis%20and%20Prediction/predictive_analysis_Image/eda_attrition_income.png)
 
   Karyawan dengan pendapatan bulanan di bawah 5.000 memiliki tingkat *attrition* yang paling tinggi.  
   - **Rekomendasi**:  
@@ -469,7 +467,7 @@ Berdasarkan hasil analisis dari proses pemodelan dan *exploratory data analysis*
 Rekomendasi ini didasarkan pada hasil analisis mendalam dari data *attrition*. Implementasi strategi-strategi ini diharapkan dapat membantu perusahaan dalam meningkatkan retensi karyawan, menciptakan lingkungan kerja yang lebih positif, dan mengurangi biaya terkait pergantian tenaga kerja. 
 
 ## Rekomendasi Penerapan Model
-![Rekomendasi Implementasi Model](predictive_analysis_image/implement_recom.png)
+![Rekomendasi Implementasi Model](https://github.com/Haniff-Toha/DataScience_Portofolio/blob/main/HR%20Employee%20Attrition%20Analysis%20and%20Prediction/predictive_analysis_Image/implement_recom.png)
 
 ## Referensi
 - [Suriati, et.al (2024). "Effective Strategies for Retaining and Nurturing employees in Organizations" *Advances Jurnal Ekonomi & Bisnis*](https://www.researchgate.net/publication/381099401_Effective_Strategies_for_Retaining_and_Nurturing_employees_in_Organizations)  
