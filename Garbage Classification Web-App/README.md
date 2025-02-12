@@ -2,6 +2,9 @@
 
 **file Dataset** : https://www.kaggle.com/datasets/mostafaabla/garbage-classification/code?datasetId=1115942&sortBy=relevance
 
+## Project Implementation
+![Implementasi projek](https://github.com/Haniff-Toha/DataScience_Portofolio/blob/main/Garbage%20Classification%20Web-App/inferensi_tfjs.gif)
+
 ## Overview
 Proyek ini menunjukkan model klasifikasi sampah menggunakan dengan beberap ametode deployment diantaranya 
 TFJS, TF-Lite, dan Saved Model. Model ini dilatih untuk mengklasifikasikan gambar sampah ke dalam salah satu 
