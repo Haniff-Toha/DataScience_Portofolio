@@ -1,0 +1,17 @@
+# Submission 2: Nama Proyek Anda
+Nama: Muhammad Haniff
+
+Username dicoding:muhammadhaniff
+
+| | Deskripsi |
+| ----------- | ----------- |
+| Dataset | [Heart Disease Prediction](https://www.kaggle.com/datasets/abhishek14398/heart-disease-classification/data) |
+| Masalah | Penyakit jantung merupakan salah satu penyakit yang berbahaya dan dapat timbul secara tiba-tiba. Sebagai langkah pencegahan ialah dengan memprediksi apakah seseorang berisiko terkena penyakit jantung berdasarkan fitur kesehatan seperti tekanan darah, kadar kolesterol, detak jantung, dan faktor lainnya. |
+| Solusi machine learning | Membangun model klasifikasi yang dapat mengidentifikasi kemungkinan penyakit jantung berdasarkan data medis pasien. Model ini akan membantu tenaga medis dalam pengambilan keputusan. |
+| Metode pengolahan | Pada projek ini, dataset terdiri dari 5 fitur numerikal dan 8 fitur kategorikal, serta 1 buah label target. fitur numerikal dan kategorikal, semuanya digunakan untuk memprediksi label target apakah pasien memeliki penyakit jantung atau tidak. Keseluruhan dataset dibagi menjadi dua untuk training set dan evaluation set dengan perbandingan 80:20. Kemudian dilakukan metode pengolahan untuk data kategorikal adalah mengubahnya menjadi bentuk one-hot encoding, sedangkan untuk data numerikal dilakukan normalisasi kedalam range 0-1. |
+| Arsitektur model | Arsitektur model yang digunakan terdiri dari input layer untuk keseluruhan fitur yang digabungkan dengan layer concatenate, selanjutnya diikuti dengan 3 fully connected layer/ dense layer dengan dense unit berdasarkan hyperparameter tuning, serta 2 layer Dropout dengan rate yang juga disesuaikan dengan tunning parameter, kemudian Output layer dengan aktivasi sigmoid. Optimizer yang digunakan adalah Adam dengan loss function BinaryCrossentropy dengan learning rate yang juga didapatkan dari hasil tuning parameter |
+| Metrik evaluasi | Metrik evaluasi yang digunakan pada projek ini diantaranya AUC, Precision, Recall, dan BinaryAccuracy |
+| Performa model | Evaluasi model diperoleh yaitu Precision sebesar 0.917 atau 91,7%, Recall sebesar 0.786, AUC sebesar 0.898 atau 89.8%, dengan BinaryAccuracy 0.813 atau 81.3%, dan loss sebesar 0.553. Model yang telah dibuat sudah cukup baik untuk diimplementasikan akan tetapi perlu identifikasi lebih dalam dengan pakar penyakit janjtung dan expert lain dibidangnya. Walaupun pada pengujian didapati hasil yang sesuai dengan keinginan  |
+| Opsi deployment | Proyek machine learning ini telah dideploy menggunakan salah satu platform as a service (PaaS) yaitu Railway yang bersifat open-source |
+| Web app | [heart-disease-prediction](https://heart-disease-prediction-production-a4aa.up.railway.app/v1/models/heart-disease-model/metadata)|
+| Monitoring | pada proyek ini digunakan beberapa opsi monitoring yang dibangun dalam docker. Diantaranya Prometheus digunakan untuk mengumpulkan metrik dari model serving. dan Grafana yang mengambil data source dari prometheus dan dapat digunakan untuk visualisasi metrik yang lebih menarik, termasuk latensi API, jumlah request, dan performa model dari waktu ke waktu. Fungsi monitoring saat ini baru terfokus pada pelacakan request yang masuk ke sistem, menampilkan status dari setiap request. Terdapat tiga status yang ditampilkan: Not Found, Invalid Argument, dan OK. |
