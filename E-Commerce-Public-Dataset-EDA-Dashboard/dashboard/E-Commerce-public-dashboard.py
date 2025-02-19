@@ -17,7 +17,7 @@ def load_data():
     order_items_df = pd.read_csv("https://raw.githubusercontent.com/Haniff-Toha/DataScience_Portofolio/refs/heads/main/E-Commerce-Public-Dataset-EDA-Dashboard/dashboard/customers_dataset.csv")
     order_payments_df = pd.read_csv("https://raw.githubusercontent.com/Haniff-Toha/DataScience_Portofolio/refs/heads/main/E-Commerce-Public-Dataset-EDA-Dashboard/dashboard/customers_dataset.csv")
     order_reviews_df = pd.read_csv("https://raw.githubusercontent.com/Haniff-Toha/DataScience_Portofolio/refs/heads/main/E-Commerce-Public-Dataset-EDA-Dashboard/dashboard/order_reviews_dataset.csv")
-    orders_df = pd.read_csv("https://raw.githubusercontent.com/Haniff-Toha/DataScience_Portofolio/refs/heads/main/E-Commerce-Public-Dataset-EDA-Dashboard/dashboard/orders_dataset.csv", 'order_delivered_customer_date'])
+    orders_df = pd.read_csv("https://raw.githubusercontent.com/Haniff-Toha/DataScience_Portofolio/refs/heads/main/E-Commerce-Public-Dataset-EDA-Dashboard/dashboard/orders_dataset.csv", parse_dates=['order_purchase_timestamp', 'order_delivered_customer_date'])
     products_df = pd.read_csv("https://raw.githubusercontent.com/Haniff-Toha/DataScience_Portofolio/refs/heads/main/E-Commerce-Public-Dataset-EDA-Dashboard/dashboard/products_dataset.csv")
     product_category_df = pd.read_csv("https://raw.githubusercontent.com/Haniff-Toha/DataScience_Portofolio/refs/heads/main/E-Commerce-Public-Dataset-EDA-Dashboard/dashboard/product_category_name_translation.csv")
     sellers_df = pd.read_csv("https://raw.githubusercontent.com/Haniff-Toha/DataScience_Portofolio/refs/heads/main/E-Commerce-Public-Dataset-EDA-Dashboard/dashboard/sellers_dataset.csv")
