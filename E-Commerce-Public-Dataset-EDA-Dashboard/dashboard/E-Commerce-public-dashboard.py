@@ -356,129 +356,126 @@ elif analysis_type == "Geographical Trends":
     st.image("E-Commerce-Public-Dataset-EDA-Dashboard/dashboard/geo2.png")
 
     #st.text("Ignore the text below, it was a commented code")
-
-if False:
-    '''
     # Date range input for filtering
-    start_date = st.date_input("Start Date", value=pd.to_datetime("2017-01-01"))
-    end_date = st.date_input("End Date", value=pd.to_datetime("2022-12-31"))
+    # start_date = st.date_input("Start Date", value=pd.to_datetime("2017-01-01"))
+    # end_date = st.date_input("End Date", value=pd.to_datetime("2022-12-31"))
 
     # Merge customers and orders data
-    customer_order = orders_df.merge(customers_df, on="customer_id", how="left")
-    geographical_customer_order_df = customer_order.merge(
-        geolocation_df, 
-        left_on="customer_zip_code_prefix", 
-        right_on="geolocation_zip_code_prefix", 
-        how="left"
-    )
-    geographical_customer_order_df = geographical_customer_order_df.merge(
-        order_payments_df[['order_id', 'payment_value']], 
-        on="order_id", 
-        how="left"
-    )
+    # customer_order = orders_df.merge(customers_df, on="customer_id", how="left")
+    # geographical_customer_order_df = customer_order.merge(
+    #     geolocation_df, 
+    #     left_on="customer_zip_code_prefix", 
+    #     right_on="geolocation_zip_code_prefix", 
+    #     how="left"
+    # )
+    # geographical_customer_order_df = geographical_customer_order_df.merge(
+    #     order_payments_df[['order_id', 'payment_value']], 
+    #     on="order_id", 
+    #     how="left"
+    # )
 
     # Filter the data based on the selected date range
-    geographical_customer_order_df['order_purchase_timestamp'] = pd.to_datetime(geographical_customer_order_df['order_purchase_timestamp'])
-    filtered_data = geographical_customer_order_df[
-        (geographical_customer_order_df['order_purchase_timestamp'] >= pd.to_datetime(start_date)) & 
-        (geographical_customer_order_df['order_purchase_timestamp'] <= pd.to_datetime(end_date))
-    ]
+    # geographical_customer_order_df['order_purchase_timestamp'] = pd.to_datetime(
+    #     geographical_customer_order_df['order_purchase_timestamp']
+    # )
+    # filtered_data = geographical_customer_order_df[
+    #     (geographical_customer_order_df['order_purchase_timestamp'] >= pd.to_datetime(start_date)) & 
+    #     (geographical_customer_order_df['order_purchase_timestamp'] <= pd.to_datetime(end_date))
+    # ]
 
     # Group by state for total sales
-    state_sales = filtered_data.groupby("customer_state")["payment_value"].sum().reset_index()
+    # state_sales = filtered_data.groupby("customer_state")["payment_value"].sum().reset_index()
 
     # Group by state for customer distribution
-    state_customers = filtered_data.groupby("customer_state")["customer_id"].nunique().reset_index()
+    # state_customers = filtered_data.groupby("customer_state")["customer_id"].nunique().reset_index()
 
     # Merge sales and customer data for top states analysis
-    top_states_sales = state_sales.nlargest(5, 'payment_value')
-    top_states_customers = state_customers.nlargest(5, 'customer_id')
+    # top_states_sales = state_sales.nlargest(5, 'payment_value')
+    # top_states_customers = state_customers.nlargest(5, 'customer_id')
 
     # Plotting the bar charts side by side
-    fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(14, 6))
+    # fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(14, 6))
 
     # Total Sales by State
-    ax1.bar(top_states_sales['customer_state'], top_states_sales['payment_value'], color='skyblue')
-    ax1.set_title("Top 5 States by Total Sales")
-    ax1.set_xlabel("State")
-    ax1.set_ylabel("Total Sales (BRL)")
-    for i, value in enumerate(top_states_sales['payment_value']):
-        ax1.text(i, value + 1000000, f"{value:,.2f}", ha='center', fontsize=10)
+    # ax1.bar(top_states_sales['customer_state'], top_states_sales['payment_value'], color='skyblue')
+    # ax1.set_title("Top 5 States by Total Sales")
+    # ax1.set_xlabel("State")
+    # ax1.set_ylabel("Total Sales (BRL)")
+    # for i, value in enumerate(top_states_sales['payment_value']):
+    #     ax1.text(i, value + 1000000, f"{value:,.2f}", ha='center', fontsize=10)
 
     # Customer Distribution by State
-    ax2.bar(top_states_customers['customer_state'], top_states_customers['customer_id'], color='lightgreen')
-    ax2.set_title("Top 5 States by Customer Distribution")
-    ax2.set_xlabel("State")
-    ax2.set_ylabel("Customer Count")
-    for i, value in enumerate(top_states_customers['customer_id']):
-        ax2.text(i, value + 100, f"{value:,}", ha='center', fontsize=10)
+    # ax2.bar(top_states_customers['customer_state'], top_states_customers['customer_id'], color='lightgreen')
+    # ax2.set_title("Top 5 States by Customer Distribution")
+    # ax2.set_xlabel("State")
+    # ax2.set_ylabel("Customer Count")
+    # for i, value in enumerate(top_states_customers['customer_id']):
+    #     ax2.text(i, value + 100, f"{value:,}", ha='center', fontsize=10)
 
     # Display charts side by side
-    st.pyplot(fig)
+    # st.pyplot(fig)
 
     # Prepare for Map Visualization using Matplotlib
     # Extract state code correctly from shapefile
-    brazil_states["state_code"] = brazil_states["HASC_1"].apply(lambda x: x.split(".")[-1])
+    # brazil_states["state_code"] = brazil_states["HASC_1"].apply(lambda x: x.split(".")[-1])
 
     # Merge shapefile data with sales data
-    brazil_map_data = brazil_states.merge(
-        state_sales, 
-        left_on="state_code", 
-        right_on="customer_state", 
-        how="left"
-    )
+    # brazil_map_data = brazil_states.merge(
+    #     state_sales, 
+    #     left_on="state_code", 
+    #     right_on="customer_state", 
+    #     how="left"
+    # )
 
     # Handle missing data (fill NaNs)
-    brazil_map_data["payment_value"] = brazil_map_data["payment_value"].fillna(0)
+    # brazil_map_data["payment_value"] = brazil_map_data["payment_value"].fillna(0)
 
     # Create the map using Matplotlib
-    fig, ax = plt.subplots(1, 1, figsize=(12, 8))
+    # fig, ax = plt.subplots(1, 1, figsize=(12, 8))
 
     # Plot the states with total sales as the color scale
-    brazil_map_data.plot(
-        column='payment_value',
-        cmap='YlGnBu',
-        linewidth=0.8,
-        ax=ax,
-        edgecolor='0.8',
-        legend=True,
-        legend_kwds={'label': "Total Sales (BRL)", 'orientation': "vertical"}
-    )
+    # brazil_map_data.plot(
+    #     column='payment_value',
+    #     cmap='YlGnBu',
+    #     linewidth=0.8,
+    #     ax=ax,
+    #     edgecolor='0.8',
+    #     legend=True,
+    #     legend_kwds={'label': "Total Sales (BRL)", 'orientation': "vertical"}
+    # )
 
     # Add state centroids with markers for customer distribution
-    for _, row in brazil_map_data.iterrows():
-        if row['geometry'] is not None:  # Skip missing geometries
-            ax.text(
-                row['geometry'].centroid.x,
-                row['geometry'].centroid.y,
-                row['state_code'],
-                fontsize=8,
-                ha='center',
-                color='black',
-                bbox=dict(facecolor='white', edgecolor='none', alpha=0.6)
-            )
-            ax.scatter(
-                row['geometry'].centroid.x,
-                row['geometry'].centroid.y,
-                s=row['payment_value'] / 1000000,  # Adjust marker size based on total sales
-                color='red',
-                alpha=0.6
-            )
+    # for _, row in brazil_map_data.iterrows():
+    #     if row['geometry'] is not None:  # Skip missing geometries
+    #         ax.text(
+    #             row['geometry'].centroid.x,
+    #             row['geometry'].centroid.y,
+    #             row['state_code'],
+    #             fontsize=8,
+    #             ha='center',
+    #             color='black',
+    #             bbox=dict(facecolor='white', edgecolor='none', alpha=0.6)
+    #         )
+    #         ax.scatter(
+    #             row['geometry'].centroid.x,
+    #             row['geometry'].centroid.y,
+    #             s=row['payment_value'] / 1000000,  # Adjust marker size based on total sales
+    #             color='red',
+    #             alpha=0.6
+    #         )
 
     # Add titles and labels
-    ax.set_title("Geographical Distribution of Sales and Customers in Brazil", fontsize=16)
-    legend_elements = [
-        Line2D([0], [0], marker='o', color='w', label='Customer Distribution',
-            markerfacecolor='red', markersize=10, alpha=0.6)
-    ]
-    ax.legend(handles=legend_elements, loc='upper left', fontsize=10, title="Legend")
-    ax.axis('off')  # Turn off the axes
+    # ax.set_title("Geographical Distribution of Sales and Customers in Brazil", fontsize=16)
+    # legend_elements = [
+    #     Line2D([0], [0], marker='o', color='w', label='Customer Distribution',
+    #         markerfacecolor='red', markersize=10, alpha=0.6)
+    # ]
+    # ax.legend(handles=legend_elements, loc='upper left', fontsize=10, title="Legend")
+    # ax.axis('off')  # Turn off the axes
 
     # Show the map
-    st.pyplot(fig)
-    '''
+    # st.pyplot(fig)
 
-if True:
 #========================================================================================================
 elif analysis_type == "Customer Behavior":
     st.header("Customer Behavior (RFM Analysis)")
