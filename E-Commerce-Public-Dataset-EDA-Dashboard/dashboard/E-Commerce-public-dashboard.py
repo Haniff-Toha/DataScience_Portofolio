@@ -38,7 +38,7 @@ products_df['product_category_name'] = products_df['product_category_name_englis
 
 # Sidebar for navigation
 with st.sidebar:
-    st.image("E-Commerce-logo.png", width=200)
+    st.image("E-Commerce-Public-Dataset-EDA-Dashboard/dashboard/E-Commerce-logo.png", width=200)
     st.sidebar.title("Navigation")
     analysis_type = st.sidebar.radio(
         "Select Analysis",
