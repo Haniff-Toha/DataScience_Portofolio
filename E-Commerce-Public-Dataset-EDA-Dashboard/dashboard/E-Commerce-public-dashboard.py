@@ -12,15 +12,15 @@ from matplotlib.lines import Line2D
 # Load datasets (cached for performance)
 @st.cache_data
 def load_data():
-    customers_df = pd.read_csv("customers_dataset.csv")
-    geolocation_df = pd.read_csv("geolocation_dataset.csv")
-    order_items_df = pd.read_csv("order_items_dataset.csv")
-    order_payments_df = pd.read_csv("order_payments_dataset.csv")
-    order_reviews_df = pd.read_csv("order_reviews_dataset.csv")
-    orders_df = pd.read_csv("orders_dataset.csv", parse_dates=['order_purchase_timestamp', 'order_delivered_customer_date'])
-    products_df = pd.read_csv("products_dataset.csv")
-    product_category_df = pd.read_csv("product_category_name_translation.csv")
-    sellers_df = pd.read_csv("sellers_dataset.csv")
+    customers_df = pd.read_csv("E-Commerce-Public-Dataset-EDA-Dashboard/dashboard/customers_dataset.csv")
+    geolocation_df = pd.read_csv("E-Commerce-Public-Dataset-EDA-Dashboard/dashboard/geolocation_dataset.csv")
+    order_items_df = pd.read_csv("E-Commerce-Public-Dataset-EDA-Dashboard/dashboard/order_items_dataset.csv")
+    order_payments_df = pd.read_csv("E-Commerce-Public-Dataset-EDA-Dashboard/dashboard/order_payments_dataset.csv")
+    order_reviews_df = pd.read_csv("E-Commerce-Public-Dataset-EDA-Dashboard/dashboard/order_reviews_dataset.csv")
+    orders_df = pd.read_csv("E-Commerce-Public-Dataset-EDA-Dashboard/dashboard/orders_dataset.csv", 'order_delivered_customer_date'])
+    products_df = pd.read_csv("E-Commerce-Public-Dataset-EDA-Dashboard/dashboard/products_dataset.csv")
+    product_category_df = pd.read_csv("E-Commerce-Public-Dataset-EDA-Dashboard/dashboard/product_category_name_translation.csv")
+    sellers_df = pd.read_csv("E-Commerce-Public-Dataset-EDA-Dashboard/dashboard/sellers_dataset.csv")
     brazil_states = gpd.read_file("brazil_states/BRA_adm1.shp")
     return customers_df, geolocation_df, order_items_df, order_payments_df, order_reviews_df, orders_df, products_df, product_category_df, sellers_df, brazil_states
 
