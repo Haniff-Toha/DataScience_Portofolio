@@ -349,12 +349,15 @@ elif analysis_type == "Delivery Times and Reviews":
 #================================================================================================
 elif analysis_type == "Geographical Trends":
     st.header("Geographical Trends")
-    st.text("sorry for the inconvenience, the geographical trend are too heavy too run in streamlit, the codes are already provided in github")
-    st.text("these are a picture showing the geographical visualization")
+    st.text("sorry for the inconvenience, the geographical trend are too heavy to run in streamlit, the codes are already provided in github")
+    st.text("these are a picture showing the geographical visualization:")
 
     st.image("E-Commerce-Public-Dataset-EDA-Dashboard/dashboard/geo1.png")
     st.image("E-Commerce-Public-Dataset-EDA-Dashboard/dashboard/geo2.png")
 
+    #st.text("Ignore the text below, it was a commented code")
+
+if False:
     '''
     # Date range input for filtering
     start_date = st.date_input("Start Date", value=pd.to_datetime("2017-01-01"))
@@ -475,6 +478,7 @@ elif analysis_type == "Geographical Trends":
     st.pyplot(fig)
     '''
 
+if True:
 #========================================================================================================
 elif analysis_type == "Customer Behavior":
     st.header("Customer Behavior (RFM Analysis)")
