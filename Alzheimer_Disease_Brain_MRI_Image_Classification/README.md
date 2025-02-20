@@ -1,5 +1,11 @@
 # Proyek Klasifikasi Gambar: Brain MRI Alzheimer Classification
 
+Full Resource available here: https://drive.google.com/file/d/1MIUdu4iSSlrasrNtNF27WyQJSD63mi2G/view?usp=drive_link
+
+**Project Impelementation**:
+
+![implementasi tfjs](test-inferensi-tfjs.gif)
+
 ## Deskripsi Proyek  
 Proyek ini bertujuan untuk mengembangkan model klasifikasi gambar untuk mendeteksi tipe alzheimer berdasarkan MRI Otak pasien. Dari percobaan yang dilakukan didapati arsitektur **VGG16** memberikan akurasi testing dan training dataset mencapai **>95%**. Model ini digunakan untuk mengidentifikasi tingkat keparahan **penyakit Alzheimer** berdasarkan citra **MRI otak**. Model awalnya dibuat dan dilatih menggunakan **TensorFlow (Python)**, kemudian dikonversi ke beberapa format yakni **SavedModel, TF-Lite, dan TensorFlow.js** agar dapat digunakan dalam berbagai aplikasi. Salah satu pengujian yang sudah dilakukan menggunakan web.  
 
