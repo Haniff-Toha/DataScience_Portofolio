@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TensorFlow.js: Brain MRI Alzheimer's Classification</title>
+    
+    <link href="styles/style.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>      
+    <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet'>  
+    <link href='https://fonts.googleapis.com/css?family=Pontano Sans' rel='stylesheet'> 
+    
+    <!-- Load TensorFlow.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest"></script>
+</head>
+<body onload="myFunction()" style="margin:0;">
+    <div class="header">
+        <img src="styles/logo.jpg" alt="Logo">
+    </div>
+
+    <div class="main">
+        <img src="styles/tensorflow_logo.png" alt="TensorFlow Logo">
+        <h1>TensorFlow.js</h1>
+        <h2>Brain MRI Alzheimer's Classification</h2>
+        <h3>
+            <p>
+                This example demonstrates loading a pre-trained model and using it in the browser. This model is trained to
+                predict alzheimer's diseas using brain mri images. The model can predict 4 types of alzheimer. You can experiment with the model on this page.
+            </p>
+        </h3>
+    </div>
+
+    <div class="container">
+        <div class="demo">
+            <h1>Thank you for your visit!</h1>
+            <h2>We are here to provide an explanation on how to predict 4 types of alzheimer based on brain mri. Please give us feedback, your feedback helps us make that possible.</h2>
+            <br><br>
+            <div id="loaderlabel"><h2>Loading Model...</h2></div>
+            <div id="loader"></div>   
+            <div id="mainAPP">
+                <div class="upload-container">
+                    <label for="input" class="upload-label">Upload an image:</label>
+                    <input type="file" id="input" accept="image/*" class="upload-input">
+                </div>
+                <button class="button" style="vertical-align:middle" onclick="onClick()"><span>Predict Image</span></button>
+                <br><br>
+                <div class="image-preview-container">
+                    <div class="image-container">
+                        <img id="selectedImage" class="selected-image" style="display: none;" alt="Selected Image">
+                    </div>
+                </div>
+                <p></p>
+            </div>     
+        </div>  
+    </div>
+
+    <!-- Load JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
