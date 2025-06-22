@@ -4,10 +4,10 @@ import numpy as np
 from sklearn.preprocessing import MinMaxScaler
 
 # Load model
-model = joblib.load("https://github.com/Haniff-Toha/DataScience_Portofolio/raw/refs/heads/main/Student_Dropout_Prediction/requirements.txt")
+model = joblib.load("Student_Dropout_Prediction/rf_model.joblib")
 
 # Load scaler (assuming you've saved it, or redefine the same fit here)
-scaler = joblib.load("https://github.com/Haniff-Toha/DataScience_Portofolio/raw/refs/heads/main/Student_Dropout_Prediction/scaler.joblib")  # If not saved, manually define it as used before
+scaler = joblib.load("Student_Dropout_Prediction/scaler.joblib")  # If not saved, manually define it as used before
 
 st.title("🎓 Student Dropout Prediction App")
 
