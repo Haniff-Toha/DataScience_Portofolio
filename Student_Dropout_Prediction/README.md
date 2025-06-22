@@ -25,20 +25,20 @@ Setup environment:
 ```bash
 conda create -n student-do-project python=3.10
 conda activate student-do-project
-pip install -r requirements.txt
+pip install -r venv_requirements.txt
 ```
 
 ---
 
 ## Business Dashboard
 
-Business dashboard berupa **visualisasi** dibuat dengan metabase untuk memahami karakteristik mahasiswa yang cenderung dropout. Insight yang diperoleh antara lain:
+Business dashboard berupa **visualisasi** dibuat dengan metabase untuk memahami demografi mahasiswa serta karakteristik mahasiswa yang cenderung dropout. Insight yang diperoleh antara lain:
 
 * Mahasiswa dengan **waktu attendance sore (evening)** memiliki dropout rate paling tinggi, kemungkinan karena mereka juga bekerja.
 * Dropout rate lebih tinggi pada mahasiswa **yang tidak menerima beasiswa**, kemungkinan karena kesulitan biaya.
 * Mahasiswa yang **memiliki utang (debtor)** cenderung lebih banyak dropout.
-* Berdasarkan 4 kebangsaan terbanyak, **mahasiswa asal Brasil** memiliki dropout rate tertinggi.
-* Pada 4 program studi terpopuler, program **Manajemen (Evening Attendance)** memiliki dropout rate tertinggi.
+* **mahasiswa asal Portugese** merupakan mayoritas di Jaya Jaya Institute.
+* program studi **Nurse** menjadi program studi paling diminati.
 * Mahasiswa dengan nilai **Previous Qualification Grade** dan **Admission Grade** yang rendah juga lebih cenderung dropout.
 
 ![Dashboard](muhammadhaniff_dashboard.jpg)
@@ -49,8 +49,14 @@ Business dashboard berupa **visualisasi** dibuat dengan metabase untuk memahami 
 
 Model machine learning yang digunakan adalah **Random Forest Classifier**. Model dilatih menggunakan data yang telah diproses dan disimpan dalam file `rf_model.joblib`. Aplikasi prediksi dibangun menggunakan **Streamlit**.
 
-Untuk menjalankan dapat mengunjungi: [Link Streamlit Cloud](https://student-dropout-byyhqcwcxgm6mpfvaoevsx.streamlit.app/)
+Untuk menjalankan-ny secara online dapat mengunjungi: [Link Streamlit Cloud](https://student-dropout-byyhqcwcxgm6mpfvaoevsx.streamlit.app/)
 
+
+untuk menjalankan secara lokal dapat dilakukan dengan:
+```bash
+conda activate student-do-project
+streamlit run app.py
+```
 
 Prototype dapat digunakan untuk mengisi data mahasiswa dan memprediksi apakah mahasiswa tersebut berisiko dropout atau tidak.
 
@@ -64,5 +70,5 @@ Model machine learning berhasil dibangun dan mampu memprediksi potensi dropout m
 
 * **Berikan bantuan finansial** atau beasiswa kepada mahasiswa dengan kesulitan biaya, terutama yang tidak mendapatkan beasiswa atau memiliki utang.
 * **Pantau mahasiswa evening class** secara lebih intensif, karena mereka memiliki risiko dropout lebih tinggi.
-* **Identifikasi mahasiswa dengan nilai rendah** sejak awal dan berikan pendampingan akademik atau mentoring.
+* **Identifikasi mahasiswa dengan nilai rendah** sejak awal melalui model yang sudah dikembangkan (dapat mengakses: [Dropout Identifier](https://student-dropout-byyhqcwcxgm6mpfvaoevsx.streamlit.app/)) dan berikan pendampingan akademik atau mentoring.
 * Lakukan **analisis lebih lanjut berdasarkan nationality dan course** untuk mendesain program intervensi yang lebih tepat sasaran.
